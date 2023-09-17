@@ -1,0 +1,72 @@
+2023-09-17T09:09:07.323Z error uncaughtException: logger is not defined
+ReferenceError: logger is not defined
+    at D:\RIS\FYP\combinenodejs\routes\user_routes.js:8:2
+    at Layer.handle [as handle_request] (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\layer.js:95:5)
+    at D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\index.js:328:13)
+    at D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (D:\RIS\FYP\combinenodejs\node_modules\express\lib\middleware\init.js:40:5)
+2023-09-17T09:09:07.589Z error uncaughtException: logger is not defined
+ReferenceError: logger is not defined
+    at D:\RIS\FYP\combinenodejs\routes\user_routes.js:8:2
+    at Layer.handle [as handle_request] (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\layer.js:95:5)
+    at D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\index.js:328:13)
+    at D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (D:\RIS\FYP\combinenodejs\node_modules\express\lib\middleware\init.js:40:5)
+2023-09-17T09:17:03.957Z error uncaughtException: logger is not defined
+ReferenceError: logger is not defined
+    at D:\RIS\FYP\combinenodejs\routes\user_routes.js:10:2
+    at Layer.handle [as handle_request] (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\layer.js:95:5)
+    at D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\index.js:328:13)
+    at D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (D:\RIS\FYP\combinenodejs\node_modules\express\lib\middleware\init.js:40:5)
+2023-09-17T09:17:04.081Z error uncaughtException: logger is not defined
+ReferenceError: logger is not defined
+    at D:\RIS\FYP\combinenodejs\routes\user_routes.js:10:2
+    at Layer.handle [as handle_request] (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\layer.js:95:5)
+    at D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\index.js:328:13)
+    at D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\RIS\FYP\combinenodejs\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (D:\RIS\FYP\combinenodejs\node_modules\express\lib\middleware\init.js:40:5)

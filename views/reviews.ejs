@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate Tree</title>
+    <!-- Add Font Awesome for star icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Add your CSS styles here -->
+    <style>
+        /* Style for the star rating */
+        .star-rating {
+            font-size: 24px;
+            display: inline-block;
+            cursor: pointer;
+        }
+    
+        .star-rating i {
+            color: gray;
+            transition: color 0.2s; /* Smooth color transition */
+        }
+    
+        .star-rating i.active {
+            color: gold;
+        }
+    
+        /* Style for the form container */
+        #reviewForm {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+    
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            resize: none;
+        }
+    
+        /* Style for the submit button */
+        #submitReview {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #3f51b5;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+        }
+    
+        #submitReview:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Rate This Tree</h1>
+    <p id="error-message" style="color: red;"></p>
+    <form id="reviewForm">
+        <!-- Hidden input fields to pass farmID and treeID to the server -->
+        <input type="hidden" name="farmID" value="<%= farmID %>">
+        <input type="hidden" name="treeID" value="<%= treeID %>">
+        
+        <!-- Rating input (star rating system) -->
+        <div class="star-rating">
+            <i class="fas fa-star" data-rating="1"></i>
+            <i class="fas fa-star" data-rating="2"></i>
+            <i class="fas fa-star" data-rating="3"></i>
+            <i class="fas fa-star" data-rating="4"></i>
+            <i class="fas fa-star" data-rating="5"></i>
+            <input type="hidden" name="rating" value="0" id="selectedRating"> <!-- Hidden input to store the selected rating -->
+        </div>
+        
+        <!-- Comment input -->
+        <label for="comment">Comment:</label>
+        <textarea name="comment" id="comment" rows="4" required></textarea>
+        
+        <!-- Submit button -->
+        <button type="button" id="submitReview">Submit Review</button>
+    </form>
+    
+    <script>
+        // JavaScript code for the star rating system
+        const starRating = document.querySelector('.star-rating');
+        const selectedRatingInput = document.getElementById('selectedRating');
+
+        starRating.addEventListener('click', (e) => {
+            if (e.target.tagName === 'I') {
+                const rating = parseInt(e.target.getAttribute('data-rating'));
+                selectedRatingInput.value = rating;
+
+                // Highlight selected stars
+                for (let i = 1; i <= 5; i++) {
+                    const star = starRating.querySelector(`[data-rating="${i}"]`);
+                    if (i <= rating) {
+                        star.classList.add('active');
+                    } else {
+                        star.classList.remove('active');
+                    }
+                }
+            }
+        });
+
+        // JavaScript code to send form data as JSON (same as before)
+        document.getElementById('submitReview').addEventListener('click', function () {
+            const farmID = document.querySelector('input[name="farmID"]').value;
+            const treeID = document.querySelector('input[name="treeID"]').value;
+            const rating = selectedRatingInput.value; // Get the selected rating
+            const comment = document.querySelector('textarea[name="comment"]').value;
+
+             // Check if both rating and comment are empty
+        if (rating === "0" && comment.trim() === "") {
+            document.getElementById('error-message').textContent = "Please provide a rating and comment.";
+            return; // Prevent form submission
+        }
+
+        // Check if rating is empty
+        if (rating === "0") {
+            document.getElementById('error-message').textContent = "Please provide a rating.";
+            return; // Prevent form submission
+        }
+
+        // Check if comment is empty
+        if (comment.trim() === "") {
+            document.getElementById('error-message').textContent = "Please provide a comment.";
+            return; // Prevent form submission
+        }
+
+        // Create a JSON object with the form data
+        const reviewData = {
+            farmID: farmID,
+            treeID: treeID,
+            rating: rating,
+            comment: comment
+        };
+
+        // Send the JSON data to the server
+        fetch('/store-review', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(reviewData)
+        })
+        .then(response => {
+            if (response.ok) {
+                // Handle a successful response (e.g., show a success message)
+                alert('Review submitted successfully.');
+                window.location.replace('/');
+            } else {
+                // Handle an error response (e.g., show an error message)
+                alert('Failed to submit review.');
+            }
+        })
+        .catch(error => {
+            // Handle network error
+            console.error(error);
+        });
+    });
+    </script>
+</body>
+</html>

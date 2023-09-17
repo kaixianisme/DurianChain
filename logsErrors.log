@@ -1,0 +1,1213 @@
+{
+  level: 'error',
+  message: 'HTTP POST /receive-data',
+  metadata: {
+    meta: {
+      req: {
+        url: '/receive-data',
+        headers: {
+          'content-type': 'application/json',
+          'user-agent': 'PostmanRuntime/7.32.3',
+          accept: '*/*',
+          'postman-token': '20bcfa51-3151-4b45-9eba-7bb47b4c2727',
+          host: 'localhost:9000',
+          'accept-encoding': 'gzip, deflate, br',
+          connection: 'keep-alive',
+          'content-length': '188',
+          cookie: 'connect.sid=s%3A-7FYdwqdaqSxAgpg56I0m6a63iP3Ydc-.FyTqD%2Ff%2BJDM8dTsZEj3YodITNWqEVWoqI%2FWerP%2BeGN4'
+        },
+        method: 'POST',
+        httpVersion: '1.1',
+        originalUrl: '/receive-data',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 14
+    },
+    timestamp: '2023-09-15T13:09:31.859Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP POST /receive-data',
+  metadata: {
+    meta: {
+      req: {
+        url: '/receive-data',
+        headers: {
+          'content-type': 'application/json',
+          'user-agent': 'PostmanRuntime/7.33.0',
+          accept: '*/*',
+          'postman-token': '0d31b05f-b2cc-4c28-9bd1-7e81b2b45582',
+          host: 'localhost:9000',
+          'accept-encoding': 'gzip, deflate, br',
+          connection: 'keep-alive',
+          'content-length': '188'
+        },
+        method: 'POST',
+        httpVersion: '1.1',
+        originalUrl: '/receive-data',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 645
+    },
+    timestamp: '2023-09-17T04:21:06.791Z'
+  }
+}
+{
+  level: 'error',
+  message: "Error transferring data to the smart contract: Cannot read properties of undefined (reading 'length')",
+  metadata: {
+    stack: "TypeError: Cannot read properties of undefined (reading 'length')\n" +
+      '    at ABICoder.formatParam (D:\\RIS\\FYP\\combinenodejs\\node_modules\\web3-eth-abi\\src\\index.js:269:30)\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs\\node_modules\\web3-eth-abi\\src\\index.js:112:22\n' +
+      '    at Array.map (<anonymous>)\n' +
+      '    at ABICoder.encodeParameters (D:\\RIS\\FYP\\combinenodejs\\node_modules\\web3-eth-abi\\src\\index.js:105:21)\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs\\node_modules\\web3-eth-contract\\src\\index.js:531:24\n' +
+      '    at Array.map (<anonymous>)\n' +
+      '    at Object._encodeMethodABI (D:\\RIS\\FYP\\combinenodejs\\node_modules\\web3-eth-contract\\src\\index.js:530:12)\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs\\server.js:185:7\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+    timestamp: '2023-09-17T04:22:49.727Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /transfer-data',
+  metadata: {
+    meta: {
+      req: {
+        url: '/transfer-data',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'sec-ch-ua-platform': '"Windows"',
+          'upgrade-insecure-requests': '1',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+          'sec-fetch-site': 'none',
+          'sec-fetch-mode': 'navigate',
+          'sec-fetch-user': '?1',
+          'sec-fetch-dest': 'document',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AXrArVKsoyjo6ghE2foofTejxhca21e1j.xaQlgVXLE34SwpQLoiIDI3jcdpOTBa4CLu%2FyuZU9DSk'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/transfer-data',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 16
+    },
+    timestamp: '2023-09-17T04:22:49.731Z'
+  }
+}
+{
+  level: 'error',
+  message: "Error transferring data to the smart contract: Cannot read properties of undefined (reading 'length')",
+  metadata: {
+    stack: "TypeError: Cannot read properties of undefined (reading 'length')\n" +
+      '    at ABICoder.formatParam (D:\\RIS\\FYP\\combinenodejs\\node_modules\\web3-eth-abi\\src\\index.js:269:30)\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs\\node_modules\\web3-eth-abi\\src\\index.js:112:22\n' +
+      '    at Array.map (<anonymous>)\n' +
+      '    at ABICoder.encodeParameters (D:\\RIS\\FYP\\combinenodejs\\node_modules\\web3-eth-abi\\src\\index.js:105:21)\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs\\node_modules\\web3-eth-contract\\src\\index.js:531:24\n' +
+      '    at Array.map (<anonymous>)\n' +
+      '    at Object._encodeMethodABI (D:\\RIS\\FYP\\combinenodejs\\node_modules\\web3-eth-contract\\src\\index.js:530:12)\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs\\server.js:185:7\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+    timestamp: '2023-09-17T04:22:49.836Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /transfer-data',
+  metadata: {
+    meta: {
+      req: {
+        url: '/transfer-data',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          accept: '*/*',
+          'sec-fetch-site': 'none',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AXrArVKsoyjo6ghE2foofTejxhca21e1j.xaQlgVXLE34SwpQLoiIDI3jcdpOTBa4CLu%2FyuZU9DSk'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/transfer-data',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 15
+    },
+    timestamp: '2023-09-17T04:22:49.839Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /add-review-to-contract',
+  metadata: {
+    meta: {
+      req: {
+        url: '/add-review-to-contract',
+        headers: {
+          host: '192.168.100.169:9000',
+          accept: '*/*',
+          connection: 'keep-alive',
+          cookie: 'connect.sid=s%3AEPjHy9TUeoF-AOqj4HFb6ScDCpBjJlNF.Bb6EJq6SrYQM%2Fo69pclM7ankHCEdowrfbEu1IVbo7Bs',
+          'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1',
+          'accept-language': 'en-GB,en;q=0.9',
+          referer: 'http://192.168.100.169:9000/admin/dashboard',
+          'accept-encoding': 'gzip, deflate'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/add-review-to-contract',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 22
+    },
+    timestamp: '2023-09-17T05:41:48.134Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /add-review-to-contract',
+  metadata: {
+    meta: {
+      req: {
+        url: '/add-review-to-contract',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          'sec-ch-ua-platform': '"Windows"',
+          accept: '*/*',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          referer: 'http://localhost:9000/admin/dashboard',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AbK9vzjlYhrzGnNV8lBebMk6AhYDjMVUF.idNooymafRQWmK6zVl%2Bp0N%2FPfXTxGSwCkQpnMNhL%2FTk',
+          'if-none-match': 'W/"4a-ANUj2ZkxIccxkPfCAWVsMBNKLX4"'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/add-review-to-contract',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 13
+    },
+    timestamp: '2023-09-17T05:42:34.864Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /add-review-to-contract',
+  metadata: {
+    meta: {
+      req: {
+        url: '/add-review-to-contract',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          'sec-ch-ua-platform': '"Windows"',
+          accept: '*/*',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          referer: 'http://localhost:9000/admin/dashboard',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AbK9vzjlYhrzGnNV8lBebMk6AhYDjMVUF.idNooymafRQWmK6zVl%2Bp0N%2FPfXTxGSwCkQpnMNhL%2FTk'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/add-review-to-contract',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 11
+    },
+    timestamp: '2023-09-17T05:45:02.072Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /add-review-to-contract',
+  metadata: {
+    meta: {
+      req: {
+        url: '/add-review-to-contract',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'sec-ch-ua-platform': '"Windows"',
+          'upgrade-insecure-requests': '1',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+          'sec-fetch-site': 'none',
+          'sec-fetch-mode': 'navigate',
+          'sec-fetch-user': '?1',
+          'sec-fetch-dest': 'document',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AbK9vzjlYhrzGnNV8lBebMk6AhYDjMVUF.idNooymafRQWmK6zVl%2Bp0N%2FPfXTxGSwCkQpnMNhL%2FTk'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/add-review-to-contract',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 13
+    },
+    timestamp: '2023-09-17T05:48:13.810Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /add-review-to-contract',
+  metadata: {
+    meta: {
+      req: {
+        url: '/add-review-to-contract',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          accept: '*/*',
+          'sec-fetch-site': 'none',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AbK9vzjlYhrzGnNV8lBebMk6AhYDjMVUF.idNooymafRQWmK6zVl%2Bp0N%2FPfXTxGSwCkQpnMNhL%2FTk'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/add-review-to-contract',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 13
+    },
+    timestamp: '2023-09-17T05:48:13.973Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /add-review-to-contract',
+  metadata: {
+    meta: {
+      req: {
+        url: '/add-review-to-contract',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          accept: '*/*',
+          'sec-fetch-site': 'none',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AbK9vzjlYhrzGnNV8lBebMk6AhYDjMVUF.idNooymafRQWmK6zVl%2Bp0N%2FPfXTxGSwCkQpnMNhL%2FTk'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/add-review-to-contract',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 28
+    },
+    timestamp: '2023-09-17T05:52:38.849Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /add-review-to-contract',
+  metadata: {
+    meta: {
+      req: {
+        url: '/add-review-to-contract',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'cache-control': 'max-age=0',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'sec-ch-ua-platform': '"Windows"',
+          'upgrade-insecure-requests': '1',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+          'sec-fetch-site': 'none',
+          'sec-fetch-mode': 'navigate',
+          'sec-fetch-user': '?1',
+          'sec-fetch-dest': 'document',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AlGGEqCCFIos9BdhRFWf4YCsZOyK64lV_.RaH5gKZTEDilcjI5QpZalMljk%2FX7%2FK9iW6HBGmVOXNk'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/add-review-to-contract',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 15
+    },
+    timestamp: '2023-09-17T05:53:21.283Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /add-review-to-contract',
+  metadata: {
+    meta: {
+      req: {
+        url: '/add-review-to-contract',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          accept: '*/*',
+          'sec-fetch-site': 'none',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AlGGEqCCFIos9BdhRFWf4YCsZOyK64lV_.RaH5gKZTEDilcjI5QpZalMljk%2FX7%2FK9iW6HBGmVOXNk'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/add-review-to-contract',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 17
+    },
+    timestamp: '2023-09-17T05:53:21.371Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /add-review-to-contract',
+  metadata: {
+    meta: {
+      req: {
+        url: '/add-review-to-contract',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          accept: '*/*',
+          'sec-fetch-site': 'none',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AlGGEqCCFIos9BdhRFWf4YCsZOyK64lV_.RaH5gKZTEDilcjI5QpZalMljk%2FX7%2FK9iW6HBGmVOXNk'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/add-review-to-contract',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 18
+    },
+    timestamp: '2023-09-17T05:53:25.257Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /add-review-to-contract',
+  metadata: {
+    meta: {
+      req: {
+        url: '/add-review-to-contract',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'cache-control': 'max-age=0',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'sec-ch-ua-platform': '"Windows"',
+          'upgrade-insecure-requests': '1',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+          'sec-fetch-site': 'none',
+          'sec-fetch-mode': 'navigate',
+          'sec-fetch-user': '?1',
+          'sec-fetch-dest': 'document',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AlGGEqCCFIos9BdhRFWf4YCsZOyK64lV_.RaH5gKZTEDilcjI5QpZalMljk%2FX7%2FK9iW6HBGmVOXNk'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/add-review-to-contract',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 13
+    },
+    timestamp: '2023-09-17T05:53:25.481Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /add-review-to-contract',
+  metadata: {
+    meta: {
+      req: {
+        url: '/add-review-to-contract',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          accept: '*/*',
+          'sec-fetch-site': 'none',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AlGGEqCCFIos9BdhRFWf4YCsZOyK64lV_.RaH5gKZTEDilcjI5QpZalMljk%2FX7%2FK9iW6HBGmVOXNk'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/add-review-to-contract',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 14
+    },
+    timestamp: '2023-09-17T05:53:25.563Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /add-review-to-contract',
+  metadata: {
+    meta: {
+      req: {
+        url: '/add-review-to-contract',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          'sec-ch-ua-platform': '"Windows"',
+          accept: '*/*',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          referer: 'http://localhost:9000/admin/dashboard',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AlGGEqCCFIos9BdhRFWf4YCsZOyK64lV_.RaH5gKZTEDilcjI5QpZalMljk%2FX7%2FK9iW6HBGmVOXNk'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/add-review-to-contract',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 17
+    },
+    timestamp: '2023-09-17T05:53:32.311Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Error transferring data to the smart contract: contractAddress is not defined',
+  metadata: {
+    stack: 'ReferenceError: contractAddress is not defined\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs\\server.js:157:9\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+    timestamp: '2023-09-17T07:51:37.540Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /transfer-data',
+  metadata: {
+    meta: {
+      req: {
+        url: '/transfer-data',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'sec-ch-ua-platform': '"Windows"',
+          'upgrade-insecure-requests': '1',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+          'sec-fetch-site': 'none',
+          'sec-fetch-mode': 'navigate',
+          'sec-fetch-user': '?1',
+          'sec-fetch-dest': 'document',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AB4cFQ_0FxQK8IWY5MNvhwv-DJYtkdVQR.SfyarLi%2F44KkWzWBMe5D7EnaYWKHfgEqdnQRbUdUuaQ',
+          'if-none-match': 'W/"3f-UM8IZXS/Ny7ufK0qwcdM2cOUPcA"'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/transfer-data',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 24
+    },
+    timestamp: '2023-09-17T07:51:37.544Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Error transferring data to the smart contract: contractAddress is not defined',
+  metadata: {
+    stack: 'ReferenceError: contractAddress is not defined\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs\\server.js:157:9\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+    timestamp: '2023-09-17T07:51:37.646Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /transfer-data',
+  metadata: {
+    meta: {
+      req: {
+        url: '/transfer-data',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          accept: '*/*',
+          'sec-fetch-site': 'none',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AB4cFQ_0FxQK8IWY5MNvhwv-DJYtkdVQR.SfyarLi%2F44KkWzWBMe5D7EnaYWKHfgEqdnQRbUdUuaQ',
+          'if-none-match': 'W/"3f-UM8IZXS/Ny7ufK0qwcdM2cOUPcA"'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/transfer-data',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 13
+    },
+    timestamp: '2023-09-17T07:51:37.649Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Error transferring data to the smart contract: contractAddress is not defined',
+  metadata: {
+    stack: 'ReferenceError: contractAddress is not defined\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs\\server.js:157:9\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+    timestamp: '2023-09-17T07:52:24.483Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /transfer-data',
+  metadata: {
+    meta: {
+      req: {
+        url: '/transfer-data',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'cache-control': 'max-age=0',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'sec-ch-ua-platform': '"Windows"',
+          'upgrade-insecure-requests': '1',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+          'sec-fetch-site': 'none',
+          'sec-fetch-mode': 'navigate',
+          'sec-fetch-user': '?1',
+          'sec-fetch-dest': 'document',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AB4cFQ_0FxQK8IWY5MNvhwv-DJYtkdVQR.SfyarLi%2F44KkWzWBMe5D7EnaYWKHfgEqdnQRbUdUuaQ'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/transfer-data',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 25
+    },
+    timestamp: '2023-09-17T07:52:24.491Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Error transferring data to the smart contract: contractAddress is not defined',
+  metadata: {
+    stack: 'ReferenceError: contractAddress is not defined\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs\\server.js:157:9\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+    timestamp: '2023-09-17T07:52:24.565Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /transfer-data',
+  metadata: {
+    meta: {
+      req: {
+        url: '/transfer-data',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          accept: '*/*',
+          'sec-fetch-site': 'none',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AwVexby9Xwg5HBpoIvSoelZzlcDljAb3a.6F%2BnPXVbnwTec5W4%2FZOVxgYJsBurKMkKIRpE0wf5ZTY'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/transfer-data',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 14
+    },
+    timestamp: '2023-09-17T07:52:24.567Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Error: logger is not defined',
+  metadata: { timestamp: '2023-09-17T09:09:07.323Z' }
+}
+{
+  level: 'error',
+  message: 'Error: logger is not defined',
+  metadata: { timestamp: '2023-09-17T09:09:07.589Z' }
+}
+{
+  level: 'error',
+  message: 'Error: logger is not defined',
+  metadata: { timestamp: '2023-09-17T09:17:03.958Z' }
+}
+{
+  level: 'error',
+  message: 'Error: logger is not defined',
+  metadata: { timestamp: '2023-09-17T09:17:04.081Z' }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /',
+  metadata: {
+    meta: {
+      req: {
+        url: '/',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'cache-control': 'max-age=0',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'sec-ch-ua-platform': '"Windows"',
+          'upgrade-insecure-requests': '1',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+          'sec-fetch-site': 'none',
+          'sec-fetch-mode': 'navigate',
+          'sec-fetch-user': '?1',
+          'sec-fetch-dest': 'document',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AYq4JXzUqzl1HfwjeztsBgaNJ9DVhjLkn.uLGCOdOj%2BmvknxK6ax7DBvD9X90aaDhe0hy%2B5zVkS54'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 9
+    },
+    timestamp: '2023-09-17T09:17:30.036Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /',
+  metadata: {
+    meta: {
+      req: {
+        url: '/',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          accept: '*/*',
+          'sec-fetch-site': 'none',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AmrmifawVWSqJRQWi4JrtY9_lKgyixYDt.S5Hfvl9mqbeR6EebS5tVUizTCRnrukYRan43Lif7zhQ'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 3
+    },
+    timestamp: '2023-09-17T09:17:30.101Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /admin/dashboard',
+  metadata: {
+    meta: {
+      req: {
+        url: '/admin/dashboard',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'cache-control': 'max-age=0',
+          'upgrade-insecure-requests': '1',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'navigate',
+          'sec-fetch-user': '?1',
+          'sec-fetch-dest': 'document',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'sec-ch-ua-platform': '"Windows"',
+          referer: 'http://localhost:9000/admin',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AA8wO1fCHvKoNsm6qvm9BEf0NGAh2K11G.KPt5ri2rTpFokPI43aSbPkowGKoyT7nkhr2enNLNZzY'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/admin/dashboard',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 3
+    },
+    timestamp: '2023-09-17T09:23:35.734Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /admin/dashboard',
+  metadata: {
+    meta: {
+      req: {
+        url: '/admin/dashboard',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          accept: '*/*',
+          'sec-fetch-site': 'none',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AA8wO1fCHvKoNsm6qvm9BEf0NGAh2K11G.KPt5ri2rTpFokPI43aSbPkowGKoyT7nkhr2enNLNZzY'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/admin/dashboard',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 2
+    },
+    timestamp: '2023-09-17T09:23:35.821Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /admin/dashboard',
+  metadata: {
+    meta: {
+      req: {
+        url: '/admin/dashboard',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'cache-control': 'max-age=0',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'sec-ch-ua-platform': '"Windows"',
+          'upgrade-insecure-requests': '1',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'navigate',
+          'sec-fetch-user': '?1',
+          'sec-fetch-dest': 'document',
+          referer: 'http://localhost:9000/admin',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AA8wO1fCHvKoNsm6qvm9BEf0NGAh2K11G.KPt5ri2rTpFokPI43aSbPkowGKoyT7nkhr2enNLNZzY'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/admin/dashboard',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 2
+    },
+    timestamp: '2023-09-17T09:23:41.897Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /admin/dashboard',
+  metadata: {
+    meta: {
+      req: {
+        url: '/admin/dashboard',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          accept: '*/*',
+          'sec-fetch-site': 'none',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AA8wO1fCHvKoNsm6qvm9BEf0NGAh2K11G.KPt5ri2rTpFokPI43aSbPkowGKoyT7nkhr2enNLNZzY'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/admin/dashboard',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 5
+    },
+    timestamp: '2023-09-17T09:23:41.975Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /admin/dashboard',
+  metadata: {
+    meta: {
+      req: {
+        url: '/admin/dashboard',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'cache-control': 'max-age=0',
+          'upgrade-insecure-requests': '1',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'navigate',
+          'sec-fetch-user': '?1',
+          'sec-fetch-dest': 'document',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'sec-ch-ua-platform': '"Windows"',
+          referer: 'http://localhost:9000/admin',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AA8wO1fCHvKoNsm6qvm9BEf0NGAh2K11G.KPt5ri2rTpFokPI43aSbPkowGKoyT7nkhr2enNLNZzY'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/admin/dashboard',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 1
+    },
+    timestamp: '2023-09-17T09:23:45.638Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /admin/dashboard',
+  metadata: {
+    meta: {
+      req: {
+        url: '/admin/dashboard',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          accept: '*/*',
+          'sec-fetch-site': 'none',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AA8wO1fCHvKoNsm6qvm9BEf0NGAh2K11G.KPt5ri2rTpFokPI43aSbPkowGKoyT7nkhr2enNLNZzY'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/admin/dashboard',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 2
+    },
+    timestamp: '2023-09-17T09:23:45.700Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /admin/approved-review-count',
+  metadata: {
+    meta: {
+      req: {
+        url: '/admin/approved-review-count',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          'sec-ch-ua-platform': '"Windows"',
+          accept: '*/*',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          referer: 'http://localhost:9000/admin/dashboard',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AbllM_uLq6RtNCOlypHh6jrejHreCHdb8.foZI6PHlbsG6Zp3r01ZSxL9kLIyfG6AC0eC6k8qQ4GM'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/admin/approved-review-count',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 3
+    },
+    timestamp: '2023-09-17T09:42:04.531Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP POST /admin/approve-review/6506acba8f143fa849cb34da',
+  metadata: {
+    meta: {
+      req: {
+        url: '/admin/approve-review/6506acba8f143fa849cb34da',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'content-length': '0',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          'sec-ch-ua-platform': '"Windows"',
+          accept: '*/*',
+          origin: 'http://localhost:9000',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          referer: 'http://localhost:9000/admin/dashboard',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AbllM_uLq6RtNCOlypHh6jrejHreCHdb8.foZI6PHlbsG6Zp3r01ZSxL9kLIyfG6AC0eC6k8qQ4GM'
+        },
+        method: 'POST',
+        httpVersion: '1.1',
+        originalUrl: '/admin/approve-review/6506acba8f143fa849cb34da',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 14
+    },
+    timestamp: '2023-09-17T09:42:07.165Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /admin/approved-review-count',
+  metadata: {
+    meta: {
+      req: {
+        url: '/admin/approved-review-count',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          'sec-ch-ua-platform': '"Windows"',
+          accept: '*/*',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          referer: 'http://localhost:9000/admin/dashboard',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AJTvDp-8Wpv8c-lBiB_JP6hNPpgHvEIW4.kNV7jzvZxq9bJd5ZllDnvxwiMiSlOf3cZD9%2FyWCeVqM'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/admin/approved-review-count',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 4
+    },
+    timestamp: '2023-09-17T09:43:20.556Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP POST /admin/approve-review/6506acba8f143fa849cb34da',
+  metadata: {
+    meta: {
+      req: {
+        url: '/admin/approve-review/6506acba8f143fa849cb34da',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'content-length': '0',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          'sec-ch-ua-platform': '"Windows"',
+          accept: '*/*',
+          origin: 'http://localhost:9000',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          referer: 'http://localhost:9000/admin/dashboard',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AJTvDp-8Wpv8c-lBiB_JP6hNPpgHvEIW4.kNV7jzvZxq9bJd5ZllDnvxwiMiSlOf3cZD9%2FyWCeVqM'
+        },
+        method: 'POST',
+        httpVersion: '1.1',
+        originalUrl: '/admin/approve-review/6506acba8f143fa849cb34da',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 14
+    },
+    timestamp: '2023-09-17T09:43:22.605Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /add-review-to-contract',
+  metadata: {
+    meta: {
+      req: {
+        url: '/add-review-to-contract',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          'sec-ch-ua-platform': '"Windows"',
+          accept: '*/*',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          referer: 'http://localhost:9000/admin/dashboard',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AH9dpR8n1LQQ8CGJAVtReg4ZCdtK95Gh3.hmVh2%2FPiJpsNZ2gRQkoxDnhm8aqh%2BB9Pk08enXYhVEw',
+          'if-none-match': 'W/"4a-ANUj2ZkxIccxkPfCAWVsMBNKLX4"'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/add-review-to-contract',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 2
+    },
+    timestamp: '2023-09-17T09:46:05.782Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /add-review-to-contract',
+  metadata: {
+    meta: {
+      req: {
+        url: '/add-review-to-contract',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          'sec-ch-ua-platform': '"Windows"',
+          accept: '*/*',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          referer: 'http://localhost:9000/admin/dashboard',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3A2IAfYtoTewoXO2w0Uw6xT7j8fCBbqreN.2KymH9fl8pPlOllyIYJWXPm5uWNAoc9GM1vIUywmxA0'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/add-review-to-contract',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 3
+    },
+    timestamp: '2023-09-17T09:46:56.909Z'
+  }
+}

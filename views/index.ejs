@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Durian Data</title>
+    <style>
+      /* Add this CSS in a separate CSS file or within a <style> tag in your HTML head */
+
+/* Common styles for both mobile and desktop */
+body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        .container {
+            background-color: #fff;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        #harvestDuration {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        /* Styles for mobile devices */
+        @media screen and (max-width: 480px) {
+            .container {
+                max-width: 90%;
+                padding: 10px;
+            }
+
+            button#viewTreeButton {
+                padding: 8px 16px;
+            }
+        }
+
+        /* Styles for larger screens (e.g., tablets and desktops) */
+        @media screen and (min-width: 481px) {
+            /* Add any specific styles for larger screens here */
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #3f51b5;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Durian Data</h1>
+    <div class="container">
+        <p>Country: <%= durianData.country %></p>
+        <p>Post Code: <%= durianData.postCode %></p>
+        <p>Farm ID: <%= durianData.farmID %></p>
+        <p>Tree ID: <%= durianData.treeID %></p>
+        <p>Durian Type: <%= durianData.durianType %></p>
+        <p>Durian ID: <%= durianData.durianID %></p>
+        <p>Harvest Time: <%= durianData.harvestTime %></p>
+        <p>Harvest Duration: <span id="harvestDuration"><%= harvestDuration %></span></p>
+        <p>Worker ID: <%= durianData.workerID %></p>
+        <button id="viewTreeButton">View Durian Tree</button>
+    </div>
+
+
+
+    <script>
+        
+// Function to update the harvest duration
+function updateHarvestDuration() {
+  const harvestTime = new Date("<%= durianData.harvestTime %>");
+  const now = new Date();
+  const timeDifference = now - harvestTime;
+  const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+  const durationElement = document.getElementById("harvestDuration");
+  durationElement.textContent = `${days} days, ${hours} hours, ${minutes} minutes`;
+}
+
+// Update the harvest duration immediately when the page loads
+updateHarvestDuration();
+
+// Update the harvest duration every second (you can adjust the interval as needed)
+setInterval(updateHarvestDuration, 1000);
+
+// Add this JavaScript code at the end of your "DurianTypes.ejs" file
+document.getElementById('viewTreeButton').addEventListener('click', function () {
+        // Get the values of farmID and treeID (you should have them already)
+        const farmID = ("<%= durianData.farmID %>");
+        const treeID = ("<%= durianData.treeID %>");
+
+        // Redirect to the durianTree.ejs page with the farmID and treeID as parameters
+        window.location.href = `/durianTree?farmID=${farmID}&treeID=${treeID}`;
+    });
+
+      </script>
+</body>
+</html>

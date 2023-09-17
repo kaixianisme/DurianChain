@@ -1,0 +1,12 @@
+const rateLimit = require('express-rate-limit');
+
+// Define a rate-limiting middleware for the admin login route
+const adminLoginLimiter = rateLimit({
+  windowMs: 60 * 1000, // 1 minute window
+  max: 5, // 5 requests per windowMs
+  message: 'Too many login attempts. Please try again later.',
+});
+
+module.exports = {
+  adminLoginLimiter,
+};

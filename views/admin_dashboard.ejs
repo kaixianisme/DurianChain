@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* CSS for admin_dashboard.ejs */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+    color: #007bff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+#reviewsList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#reviewsList li {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+}
+
+strong {
+    font-weight: bold;
+    color: #333;
+}
+
+button.approveButton {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.approveButton:hover {
+    background-color: #0056b3;
+}
+
+#approvedReviewCount {
+    font-weight: bold;
+    color: #007bff;
+    margin-right: 5px;
+}
+
+button#submitApprovedReviews {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button#submitApprovedReviews:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+    <!-- EJS Template (admin_dashboard.ejs) -->
+<h2>Reviews</h2>
+<label>
+    <input type="checkbox" id="alertCheckbox"> Show Alert Message
+</label>
+<ul id="reviewsList">
+    <% if (reviews && reviews.length > 0) { %>
+        <% reviews.forEach(review => { %>
+            <li>
+                <strong>Farm ID:</strong> <%= review.farmID %><br>
+                <strong>Tree ID:</strong> <%= review.treeID %><br>
+                <strong>Rating:</strong> <%= review.rating %><br>
+                <strong>Comment:</strong> <%= review.comment %><br>
+                <button class="approveButton" data-review-id="<%= review._id %>">Approve</button>
+            </li>
+        <% }); %>
+    <% } else { %>
+        <li>No reviews available.</li>
+    <% } %>
+</ul>
+
+<div>
+    <p>Total Approved Reviews: <span id="approvedReviewCount">Loading...</span></p>
+    <button id="submitApprovedReviews">Submit Approved Reviews to Smart Contract</button>
+</div>
+
+
+<script>
+    // JavaScript to handle the "Approve" button click
+    const approveButtons = document.querySelectorAll('.approveButton');
+    const alertCheckbox = document.getElementById('alertCheckbox');
+    const approvedReviewCountElement = document.getElementById('approvedReviewCount');
+
+approveButtons.forEach(button => {
+    button.addEventListener('click', async (event) => {
+        const reviewId = event.target.getAttribute('data-review-id');
+
+        // Send a POST request to approve the review
+        const response = await fetch(`/admin/approve-review/${reviewId}`, {
+            method: 'POST'
+        });
+
+        if (response.status === 200) {
+            // Review approved successfully, remove it from the list
+            const reviewElement = event.target.parentElement;
+            reviewElement.remove();
+
+            // Check if the alert checkbox is checked
+            if (alertCheckbox.checked) {
+                // Display an alert message
+                alert('Review approved and removed from the list.');
+            }
+
+            // Increment the approved review count and update the UI
+            const newCount = parseInt(approvedReviewCountElement.textContent) + 1;
+            approvedReviewCountElement.textContent = newCount;
+        }
+    });
+});
+
+    // Function to fetch the total count of approved reviews
+    async function fetchApprovedReviewCount() {
+        try {
+            const response = await fetch('/admin/approved-review-count');
+            const data = await response.json();
+            return data.count;
+        } catch (error) {
+            console.error(error);
+            return 0;
+        }
+    }
+
+    // Function to submit approved reviews to the smart contract
+    async function submitApprovedReviews() {
+        const approvedReviewCount = await fetchApprovedReviewCount();
+        
+        if (approvedReviewCount > 0) {
+            const response = await fetch('/add-review-to-contract', {
+                method: 'GET'
+            });
+
+            if (response.status === 200) {
+                alert(`Successfully submitted ${approvedReviewCount} approved reviews to the smart contract.`);
+                location.reload();
+            } else {
+                alert('Failed to submit approved reviews to the smart contract.');
+            }
+        } else {
+            alert('No approved reviews to submit.');
+        }
+    }
+
+    // Update the total approved review count
+    fetchApprovedReviewCount().then(count => {
+        document.getElementById('approvedReviewCount').textContent = count;
+    });
+
+    // Add click event listener to the submit button
+    document.getElementById('submitApprovedReviews').addEventListener('click', submitApprovedReviews);
+</script>
+
+</body>
+</html>
+
+
+
+

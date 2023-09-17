@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Your HTML head content here -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Durian Tree Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+
+    <style>
+        /* Apply CSS styles here */
+
+        /* Style for the page title */
+        h1 {
+            text-align: center;
+            background-color: #3f51b5;
+            color: white;
+            padding: 10px;
+        }
+
+        /* Style for farmID and treeID paragraphs */
+        p {
+            font-weight: bold;
+        }
+
+        /* Style for durianID list */
+        ul#durianIDList {
+            list-style: none;
+            padding: 0;
+        }
+
+        /* Style for individual durianID items */
+        ul#durianIDList li {
+            margin-bottom: 5px;
+        }
+
+        /* Style for the reviews container */
+        #reviews-container {
+            margin-top: 20px;
+        }
+
+        /* Style for individual review items */
+        .review {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Style for review ratings */
+        .review p {
+            margin: 0;
+        }
+
+        /* Style for "No reviews available" message */
+        #reviews-container p.no-reviews {
+            font-style: italic;
+        }
+
+        .rate-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #3f51b5;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        /* Star rating styles */
+        .star-rating {
+            font-size: 24px;
+        }
+
+        .star-rating span {
+            color: gold;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #3f51b5;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Durian Tree Details - T<%= treeID %></h1>
+    <p>Farm ID: <%= farmID %></p>
+    <p>Tree Information - T<%= treeID %></p>
+    
+    <!-- Display durian data and reviews for the specified tree here -->
+    <div id="durianCountContainer">
+      <!-- Durian count will be displayed here -->
+  </div>
+
+    <div id="durian-details-container">
+        <!-- Durian details will be displayed here -->
+    </div>
+
+
+    <button id="toggleReviewsButton">Toggle Reviews</button>
+    <div id="reviews-container"></div>
+    <!-- "Rate this tree!" button -->
+    <a class="rate-button" href="/reviews?farmID=<%= farmID %>&treeID=<%= treeID %>">Rate this tree!</a>
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.6.1/dist/web3.min.js"></script>
+
+    <script>
+        const contractAddress = "0x2420D07305fCAABAC7596415a17970f382Ba44F9";
+  const contractABI = [
+      {
+        "inputs": [
+          {
+            "internalType": "string",
+            "name": "_country",
+            "type": "string"
+          },
+          {
+            "internalType": "uint32",
+            "name": "_postCode",
+            "type": "uint32"
+          },
+          {
+            "internalType": "uint16",
+            "name": "_farmID",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint32",
+            "name": "_treeID",
+            "type": "uint32"
+          },
+          {
+            "internalType": "uint8",
+            "name": "_durianType",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint32",
+            "name": "_durianID",
+            "type": "uint32"
+          },
+          {
+            "internalType": "string",
+            "name": "_harvestTime",
+            "type": "string"
+          },
+          {
+            "internalType": "uint16",
+            "name": "_workerID",
+            "type": "uint16"
+          }
+        ],
+        "name": "addDurian",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint16",
+            "name": "_farmID",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint32",
+            "name": "_treeID",
+            "type": "uint32"
+          },
+          {
+            "internalType": "uint8",
+            "name": "_rating",
+            "type": "uint8"
+          },
+          {
+            "internalType": "string",
+            "name": "_comment",
+            "type": "string"
+          }
+        ],
+        "name": "addReview",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint16",
+            "name": "_farmID",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint32",
+            "name": "_treeID",
+            "type": "uint32"
+          },
+          {
+            "internalType": "uint32",
+            "name": "_durianID",
+            "type": "uint32"
+          }
+        ],
+        "name": "getDurianData",
+        "outputs": [
+          {
+            "components": [
+              {
+                "internalType": "string",
+                "name": "country",
+                "type": "string"
+              },
+              {
+                "internalType": "uint32",
+                "name": "postCode",
+                "type": "uint32"
+              },
+              {
+                "internalType": "uint16",
+                "name": "farmID",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint32",
+                "name": "treeID",
+                "type": "uint32"
+              },
+              {
+                "internalType": "uint8",
+                "name": "durianType",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint32",
+                "name": "durianID",
+                "type": "uint32"
+              },
+              {
+                "internalType": "string",
+                "name": "harvestTime",
+                "type": "string"
+              },
+              {
+                "internalType": "uint16",
+                "name": "workerID",
+                "type": "uint16"
+              }
+            ],
+            "internalType": "struct DurianContract.Durian",
+            "name": "",
+            "type": "tuple"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint16",
+            "name": "_farmID",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint32",
+            "name": "_treeID",
+            "type": "uint32"
+          }
+        ],
+        "name": "getDurianIDs",
+        "outputs": [
+          {
+            "internalType": "uint32[]",
+            "name": "",
+            "type": "uint32[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "getFarmIDs",
+        "outputs": [
+          {
+            "internalType": "uint16[]",
+            "name": "",
+            "type": "uint16[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint16",
+            "name": "_farmID",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint32",
+            "name": "_treeID",
+            "type": "uint32"
+          }
+        ],
+        "name": "getReviews",
+        "outputs": [
+          {
+            "components": [
+              {
+                "internalType": "uint8",
+                "name": "rating",
+                "type": "uint8"
+              },
+              {
+                "internalType": "string",
+                "name": "comment",
+                "type": "string"
+              }
+            ],
+            "internalType": "struct DurianContract.Review[]",
+            "name": "",
+            "type": "tuple[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint16",
+            "name": "_farmID",
+            "type": "uint16"
+          }
+        ],
+        "name": "getTreeIDs",
+        "outputs": [
+          {
+            "internalType": "uint32[]",
+            "name": "",
+            "type": "uint32[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      }
+    ];
+
+  const web3 = new Web3("https://sepolia.infura.io/v3/2db8bf25ea424b7898c746d2bd37470a");
+  const contract = new web3.eth.Contract(contractABI, contractAddress);
+
+
+        // Assuming you have farmID and treeID as JavaScript variables
+        const farmID = ("<%= farmID %>");
+        const treeID = ("<%= treeID %>");
+      
+// Function to retrieve durianIDs using getDurianIDs function
+async function getDurianCount() {
+  try {
+    // Call the getDurianIDs function from your smart contract
+    const durianIDs = await contract.methods.getDurianIDs(farmID, treeID).call();
+
+    // Get the total count of durians produced by the tree
+    const durianCount = durianIDs.length;
+
+    // Display the total count in the HTML
+    const durianCountContainer = document.getElementById("durianCountContainer");
+    durianCountContainer.innerHTML = `Total Durians Produced from T${treeID}: ${durianCount}`;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+// Call the getDurianCount function when the page loads
+window.addEventListener("load", getDurianCount);
+
+
+
+        // Function to fetch and display reviews
+        async function fetchAndDisplayReviews() {
+            const farmID = ("<%= farmID %>"); // Get farmID from the template
+            const treeID = ("<%= treeID %>"); // Get treeID from the template
+
+            try {
+                const response = await fetch(`/get-reviews?farmID=${farmID}&treeID=${treeID}`);
+                const reviews = await response.json();
+
+                // Display the reviews on the page
+                const reviewsContainer = document.getElementById('reviews-container');
+                reviewsContainer.innerHTML = ''; // Clear previous content
+
+                if (reviews.length === 0) {
+                    reviewsContainer.innerHTML = '<p>No reviews available.</p>';
+                } else {
+                    reviews.forEach(review => {
+                        const reviewElement = document.createElement('div');
+                        reviewElement.classList.add('review');
+
+                        // Create star rating based on the review's rating value
+                        const ratingElement = document.createElement('div');
+                        ratingElement.classList.add('star-rating');
+                        const ratingStars = document.createElement('span');
+                        ratingStars.innerHTML = '&#9733;'.repeat(review.rating); // Display gold stars based on rating
+                        ratingElement.appendChild(ratingStars);
+
+                        const commentElement = document.createElement('p');
+                        commentElement.textContent = `Comment: ${review.comment}`;
+
+                        reviewElement.appendChild(ratingElement);
+                        reviewElement.appendChild(commentElement);
+
+                        reviewsContainer.appendChild(reviewElement);
+
+                        
+                    });
+                }
+            } catch (error) {
+                console.error(error);
+                // Handle error
+            }
+
+            const toggleReviewsButton = document.getElementById('toggleReviewsButton');
+    const reviewsContainer = document.getElementById('reviews-container');
+
+    // Initially hide the reviews
+    let reviewsVisible = false;
+    reviewsContainer.style.display = 'none';
+
+    toggleReviewsButton.addEventListener('click', () => {
+        if (reviewsVisible) {
+            // If reviews are visible, hide them
+            reviewsContainer.style.display = 'none';
+            toggleReviewsButton.textContent = 'Show Reviews';
+        } else {
+            // If reviews are hidden, display them
+            reviewsContainer.style.display = 'block';
+            toggleReviewsButton.textContent = 'Hide Reviews';
+        }
+        reviewsVisible = !reviewsVisible; // Toggle the visibility state
+    });
+        }
+
+        // Call the fetchAndDisplayReviews function when the page loads
+        fetchAndDisplayReviews();
+      </script>
+      
+</body>
+</html>
