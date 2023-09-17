@@ -3019,3 +3019,492 @@
     timestamp: '2023-09-17T09:48:12.529Z'
   }
 }
+{
+  level: 'error',
+  message: 'HTTP GET /get-reviews?farmID=333&treeID=5678s',
+  metadata: {
+    meta: {
+      req: {
+        url: '/get-reviews?farmID=333&treeID=5678s',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'sec-ch-ua-platform': '"Windows"',
+          'upgrade-insecure-requests': '1',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+          'sec-fetch-site': 'none',
+          'sec-fetch-mode': 'navigate',
+          'sec-fetch-user': '?1',
+          'sec-fetch-dest': 'document',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AodMeprLugGWjlaejwZcNihtgjCNpDoQ7.Iv4%2F9D48HrkgGWfioa%2BLH3MsiOaYr3G2xvyY1mpGaBE'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/get-reviews?farmID=333&treeID=5678s',
+        query: { farmID: '333', treeID: '5678s' }
+      },
+      res: { statusCode: 500 },
+      responseTime: 5
+    },
+    timestamp: '2023-09-17T15:21:13.422Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /get-reviews?farmID=333&treeID=5678s',
+  metadata: {
+    meta: {
+      req: {
+        url: '/get-reviews?farmID=333&treeID=5678s',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          accept: '*/*',
+          'sec-fetch-site': 'none',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AxKMpMS2r6nQVpGU5pWU3gp6f_0-Dymua.K4LM2r0AjrqL2%2FrfdTg7XBXWeWfU8HZEAyXljnopWDw'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/get-reviews?farmID=333&treeID=5678s',
+        query: { farmID: '333', treeID: '5678s' }
+      },
+      res: { statusCode: 500 },
+      responseTime: 2
+    },
+    timestamp: '2023-09-17T15:21:13.710Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Error removing data from MongoDB: res is not defined',
+  metadata: {
+    stack: 'ReferenceError: res is not defined\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs-Git\\routes\\user_routes.js:431:5\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+    timestamp: '2023-09-17T15:52:45.959Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Unhandled Promise Rejection: res is not defined',
+  metadata: {
+    stack: 'ReferenceError: res is not defined\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs-Git\\routes\\user_routes.js:435:5\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+    timestamp: '2023-09-17T15:52:45.961Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Error removing data from MongoDB: res is not defined',
+  metadata: {
+    stack: 'ReferenceError: res is not defined\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs-Git\\routes\\user_routes.js:431:5\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+    timestamp: '2023-09-17T15:53:00.033Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Unhandled Promise Rejection: res is not defined',
+  metadata: {
+    stack: 'ReferenceError: res is not defined\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs-Git\\routes\\user_routes.js:435:5\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+    timestamp: '2023-09-17T15:53:00.035Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Error removing data from MongoDB: res is not defined',
+  metadata: {
+    stack: 'ReferenceError: res is not defined\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs-Git\\routes\\user_routes.js:431:5\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+    timestamp: '2023-09-17T15:55:37.230Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Unhandled Promise Rejection: res is not defined',
+  metadata: {
+    stack: 'ReferenceError: res is not defined\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs-Git\\routes\\user_routes.js:435:5\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+    timestamp: '2023-09-17T15:55:37.233Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Error removing data from MongoDB: res is not defined',
+  metadata: {
+    stack: 'ReferenceError: res is not defined\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs-Git\\routes\\user_routes.js:431:5\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+    timestamp: '2023-09-17T15:56:09.865Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Unhandled Promise Rejection: res is not defined',
+  metadata: {
+    stack: 'ReferenceError: res is not defined\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs-Git\\routes\\user_routes.js:435:5\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+    timestamp: '2023-09-17T15:56:09.866Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Error removing data from MongoDB: res is not defined',
+  metadata: {
+    stack: 'ReferenceError: res is not defined\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs-Git\\routes\\user_routes.js:431:5\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+    timestamp: '2023-09-17T15:57:57.597Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Unhandled Promise Rejection: res is not defined',
+  metadata: {
+    stack: 'ReferenceError: res is not defined\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs-Git\\routes\\user_routes.js:435:5\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+    timestamp: '2023-09-17T15:57:57.600Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Error removing data from MongoDB: res is not defined',
+  metadata: {
+    stack: 'ReferenceError: res is not defined\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs-Git\\routes\\user_routes.js:431:5\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+    timestamp: '2023-09-17T15:58:00.034Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Unhandled Promise Rejection: res is not defined',
+  metadata: {
+    stack: 'ReferenceError: res is not defined\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs-Git\\routes\\user_routes.js:435:5\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+    timestamp: '2023-09-17T15:58:00.036Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Error removing data from MongoDB: res is not defined',
+  metadata: {
+    stack: 'ReferenceError: res is not defined\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs-Git\\routes\\user_routes.js:158:5\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+    timestamp: '2023-09-17T16:02:09.975Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Unhandled Promise Rejection: res is not defined',
+  metadata: {
+    stack: 'ReferenceError: res is not defined\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs-Git\\routes\\user_routes.js:162:5\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+    timestamp: '2023-09-17T16:02:09.977Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Error removing data from MongoDB: res is not defined',
+  metadata: {
+    stack: 'ReferenceError: res is not defined\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs-Git\\routes\\user_routes.js:158:5\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+    timestamp: '2023-09-17T16:02:15.039Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Unhandled Promise Rejection: res is not defined',
+  metadata: {
+    stack: 'ReferenceError: res is not defined\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs-Git\\routes\\user_routes.js:162:5\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+    timestamp: '2023-09-17T16:02:15.041Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Uncaught Exception: log is not defined',
+  metadata: {
+    stack: 'ReferenceError: log is not defined\n' +
+      '    at Job.job (D:\\RIS\\FYP\\combinenodejs-Git\\routes\\user_routes.js:444:2)\n' +
+      '    at Job.invoke (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\node-schedule\\lib\\Job.js:171:15)\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\node-schedule\\lib\\Invocation.js:268:28\n' +
+      '    at Timeout._onTimeout (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\node-schedule\\lib\\Invocation.js:228:7)\n' +
+      '    at listOnTimeout (node:internal/timers:569:17)\n' +
+      '    at process.processTimers (node:internal/timers:512:7)',
+    timestamp: '2023-09-17T16:04:45.016Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Uncaught Exception: app is not defined',
+  metadata: {
+    stack: 'ReferenceError: app is not defined\n' +
+      '    at Job.job (D:\\RIS\\FYP\\combinenodejs-Git\\routes\\user_routes.js:382:2)\n' +
+      '    at Job.invoke (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\node-schedule\\lib\\Job.js:171:15)\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\node-schedule\\lib\\Invocation.js:268:28\n' +
+      '    at Timeout._onTimeout (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\node-schedule\\lib\\Invocation.js:228:7)\n' +
+      '    at listOnTimeout (node:internal/timers:569:17)\n' +
+      '    at process.processTimers (node:internal/timers:512:7)',
+    timestamp: '2023-09-17T16:07:00.014Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Uncaught Exception: app.get(...) is not a function',
+  metadata: {
+    stack: 'TypeError: app.get(...) is not a function\n' +
+      '    at Job.job (D:\\RIS\\FYP\\combinenodejs-Git\\routes\\user_routes.js:383:27)\n' +
+      '    at Job.invoke (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\node-schedule\\lib\\Job.js:171:15)\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\node-schedule\\lib\\Invocation.js:268:28\n' +
+      '    at Timeout._onTimeout (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\node-schedule\\lib\\Invocation.js:228:7)\n' +
+      '    at listOnTimeout (node:internal/timers:569:17)\n' +
+      '    at process.processTimers (node:internal/timers:512:7)',
+    timestamp: '2023-09-17T16:08:30.014Z'
+  }
+}
+{
+  level: 'error',
+  message: "Uncaught Exception: Cannot read properties of null (reading 'method')",
+  metadata: {
+    stack: "TypeError: Cannot read properties of null (reading 'method')\n" +
+      '    at Function.handle (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\express\\lib\\router\\index.js:139:34)\n' +
+      '    at router (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\express\\lib\\router\\index.js:47:12)\n' +
+      '    at Job.job (D:\\RIS\\FYP\\combinenodejs-Git\\routes\\user_routes.js:382:30)\n' +
+      '    at Job.invoke (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\node-schedule\\lib\\Job.js:171:15)\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\node-schedule\\lib\\Invocation.js:268:28\n' +
+      '    at Timeout._onTimeout (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\node-schedule\\lib\\Invocation.js:228:7)\n' +
+      '    at listOnTimeout (node:internal/timers:569:17)\n' +
+      '    at process.processTimers (node:internal/timers:512:7)',
+    timestamp: '2023-09-17T16:09:00.014Z'
+  }
+}
+{
+  level: 'error',
+  message: "Uncaught Exception: Cannot read properties of null (reading 'method')",
+  metadata: {
+    stack: "TypeError: Cannot read properties of null (reading 'method')\n" +
+      '    at Function.handle (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\express\\lib\\router\\index.js:139:34)\n' +
+      '    at router (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\express\\lib\\router\\index.js:47:12)\n' +
+      '    at Job.job (D:\\RIS\\FYP\\combinenodejs-Git\\routes\\user_routes.js:382:30)\n' +
+      '    at Job.invoke (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\node-schedule\\lib\\Job.js:171:15)\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\node-schedule\\lib\\Invocation.js:268:28\n' +
+      '    at Timeout._onTimeout (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\node-schedule\\lib\\Invocation.js:228:7)\n' +
+      '    at listOnTimeout (node:internal/timers:569:17)\n' +
+      '    at process.processTimers (node:internal/timers:512:7)',
+    timestamp: '2023-09-17T16:09:15.012Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Error transferring data to the smart contract: Returned error: already known',
+  metadata: {
+    data: null,
+    stack: 'Error: Returned error: already known\n' +
+      '    at Object.ErrorResponse (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\web3-core-helpers\\src\\errors.js:30:19)\n' +
+      '    at onJsonrpcResult (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\web3-core-requestmanager\\src\\index.js:172:36)\n' +
+      '    at request.onreadystatechange (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\web3-providers-http\\src\\index.js:111:13)\n' +
+      '    at XMLHttpRequestEventTarget.dispatchEvent (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request-event-target.js:34:22)\n' +
+      '    at XMLHttpRequest._setReadyState (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request.js:208:14)\n' +
+      '    at XMLHttpRequest._onHttpResponseEnd (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request.js:318:14)\n' +
+      '    at IncomingMessage.<anonymous> (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request.js:289:61)\n' +
+      '    at IncomingMessage.emit (node:events:525:35)\n' +
+      '    at endReadableNT (node:internal/streams/readable:1359:12)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)',
+    timestamp: '2023-09-17T16:16:31.008Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Error transferring data to the smart contract: Returned error: nonce too low: next nonce 131, tx nonce 130',
+  metadata: {
+    data: null,
+    stack: 'Error: Returned error: nonce too low: next nonce 131, tx nonce 130\n' +
+      '    at Object.ErrorResponse (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\web3-core-helpers\\src\\errors.js:30:19)\n' +
+      '    at onJsonrpcResult (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\web3-core-requestmanager\\src\\index.js:172:36)\n' +
+      '    at request.onreadystatechange (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\web3-providers-http\\src\\index.js:111:13)\n' +
+      '    at XMLHttpRequestEventTarget.dispatchEvent (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request-event-target.js:34:22)\n' +
+      '    at XMLHttpRequest._setReadyState (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request.js:208:14)\n' +
+      '    at XMLHttpRequest._onHttpResponseEnd (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request.js:318:14)\n' +
+      '    at IncomingMessage.<anonymous> (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request.js:289:61)\n' +
+      '    at IncomingMessage.emit (node:events:525:35)\n' +
+      '    at endReadableNT (node:internal/streams/readable:1359:12)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)',
+    timestamp: '2023-09-17T16:20:46.063Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Error transferring data to the smart contract: Returned error: already known',
+  metadata: {
+    data: null,
+    stack: 'Error: Returned error: already known\n' +
+      '    at Object.ErrorResponse (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\web3-core-helpers\\src\\errors.js:30:19)\n' +
+      '    at onJsonrpcResult (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\web3-core-requestmanager\\src\\index.js:172:36)\n' +
+      '    at request.onreadystatechange (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\web3-providers-http\\src\\index.js:111:13)\n' +
+      '    at XMLHttpRequestEventTarget.dispatchEvent (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request-event-target.js:34:22)\n' +
+      '    at XMLHttpRequest._setReadyState (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request.js:208:14)\n' +
+      '    at XMLHttpRequest._onHttpResponseEnd (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request.js:318:14)\n' +
+      '    at IncomingMessage.<anonymous> (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request.js:289:61)\n' +
+      '    at IncomingMessage.emit (node:events:525:35)\n' +
+      '    at endReadableNT (node:internal/streams/readable:1359:12)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)',
+    timestamp: '2023-09-17T16:24:46.022Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Error transferring data to the smart contract: Returned error: already known',
+  metadata: {
+    data: null,
+    stack: 'Error: Returned error: already known\n' +
+      '    at Object.ErrorResponse (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\web3-core-helpers\\src\\errors.js:30:19)\n' +
+      '    at onJsonrpcResult (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\web3-core-requestmanager\\src\\index.js:172:36)\n' +
+      '    at request.onreadystatechange (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\web3-providers-http\\src\\index.js:111:13)\n' +
+      '    at XMLHttpRequestEventTarget.dispatchEvent (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request-event-target.js:34:22)\n' +
+      '    at XMLHttpRequest._setReadyState (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request.js:208:14)\n' +
+      '    at XMLHttpRequest._onHttpResponseEnd (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request.js:318:14)\n' +
+      '    at IncomingMessage.<anonymous> (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request.js:289:61)\n' +
+      '    at IncomingMessage.emit (node:events:525:35)\n' +
+      '    at endReadableNT (node:internal/streams/readable:1359:12)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)',
+    timestamp: '2023-09-17T16:25:15.528Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Error transferring data to the smart contract: Returned error: already known',
+  metadata: {
+    data: null,
+    stack: 'Error: Returned error: already known\n' +
+      '    at Object.ErrorResponse (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\web3-core-helpers\\src\\errors.js:30:19)\n' +
+      '    at onJsonrpcResult (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\web3-core-requestmanager\\src\\index.js:172:36)\n' +
+      '    at request.onreadystatechange (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\web3-providers-http\\src\\index.js:111:13)\n' +
+      '    at XMLHttpRequestEventTarget.dispatchEvent (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request-event-target.js:34:22)\n' +
+      '    at XMLHttpRequest._setReadyState (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request.js:208:14)\n' +
+      '    at XMLHttpRequest._onHttpResponseEnd (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request.js:318:14)\n' +
+      '    at IncomingMessage.<anonymous> (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request.js:289:61)\n' +
+      '    at IncomingMessage.emit (node:events:525:35)\n' +
+      '    at endReadableNT (node:internal/streams/readable:1359:12)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)',
+    timestamp: '2023-09-17T16:25:30.525Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Error transferring data to the smart contract: Returned error: already known',
+  metadata: {
+    data: null,
+    stack: 'Error: Returned error: already known\n' +
+      '    at Object.ErrorResponse (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\web3-core-helpers\\src\\errors.js:30:19)\n' +
+      '    at onJsonrpcResult (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\web3-core-requestmanager\\src\\index.js:172:36)\n' +
+      '    at request.onreadystatechange (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\web3-providers-http\\src\\index.js:111:13)\n' +
+      '    at XMLHttpRequestEventTarget.dispatchEvent (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request-event-target.js:34:22)\n' +
+      '    at XMLHttpRequest._setReadyState (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request.js:208:14)\n' +
+      '    at XMLHttpRequest._onHttpResponseEnd (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request.js:318:14)\n' +
+      '    at IncomingMessage.<anonymous> (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request.js:289:61)\n' +
+      '    at IncomingMessage.emit (node:events:525:35)\n' +
+      '    at endReadableNT (node:internal/streams/readable:1359:12)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)',
+    timestamp: '2023-09-17T16:25:45.527Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Error transferring data to the smart contract: Returned error: already known',
+  metadata: {
+    data: null,
+    stack: 'Error: Returned error: already known\n' +
+      '    at Object.ErrorResponse (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\web3-core-helpers\\src\\errors.js:30:19)\n' +
+      '    at onJsonrpcResult (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\web3-core-requestmanager\\src\\index.js:172:36)\n' +
+      '    at request.onreadystatechange (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\web3-providers-http\\src\\index.js:111:13)\n' +
+      '    at XMLHttpRequestEventTarget.dispatchEvent (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request-event-target.js:34:22)\n' +
+      '    at XMLHttpRequest._setReadyState (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request.js:208:14)\n' +
+      '    at XMLHttpRequest._onHttpResponseEnd (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request.js:318:14)\n' +
+      '    at IncomingMessage.<anonymous> (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request.js:289:61)\n' +
+      '    at IncomingMessage.emit (node:events:525:35)\n' +
+      '    at endReadableNT (node:internal/streams/readable:1359:12)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)',
+    timestamp: '2023-09-17T16:26:00.511Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Error transferring data to the smart contract: Returned error: replacement transaction underpriced',
+  metadata: {
+    data: null,
+    stack: 'Error: Returned error: replacement transaction underpriced\n' +
+      '    at Object.ErrorResponse (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\web3-core-helpers\\src\\errors.js:30:19)\n' +
+      '    at onJsonrpcResult (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\web3-core-requestmanager\\src\\index.js:172:36)\n' +
+      '    at request.onreadystatechange (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\web3-providers-http\\src\\index.js:111:13)\n' +
+      '    at XMLHttpRequestEventTarget.dispatchEvent (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request-event-target.js:34:22)\n' +
+      '    at XMLHttpRequest._setReadyState (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request.js:208:14)\n' +
+      '    at XMLHttpRequest._onHttpResponseEnd (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request.js:318:14)\n' +
+      '    at IncomingMessage.<anonymous> (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request.js:289:61)\n' +
+      '    at IncomingMessage.emit (node:events:525:35)\n' +
+      '    at endReadableNT (node:internal/streams/readable:1359:12)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)',
+    timestamp: '2023-09-17T16:27:00.522Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Error transferring data to the smart contract: Returned error: replacement transaction underpriced',
+  metadata: {
+    data: null,
+    stack: 'Error: Returned error: replacement transaction underpriced\n' +
+      '    at Object.ErrorResponse (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\web3-core-helpers\\src\\errors.js:30:19)\n' +
+      '    at onJsonrpcResult (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\web3-core-requestmanager\\src\\index.js:172:36)\n' +
+      '    at request.onreadystatechange (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\web3-providers-http\\src\\index.js:111:13)\n' +
+      '    at XMLHttpRequestEventTarget.dispatchEvent (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request-event-target.js:34:22)\n' +
+      '    at XMLHttpRequest._setReadyState (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request.js:208:14)\n' +
+      '    at XMLHttpRequest._onHttpResponseEnd (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request.js:318:14)\n' +
+      '    at IncomingMessage.<anonymous> (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request.js:289:61)\n' +
+      '    at IncomingMessage.emit (node:events:525:35)\n' +
+      '    at endReadableNT (node:internal/streams/readable:1359:12)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)',
+    timestamp: '2023-09-17T16:29:00.553Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Error transferring data to the smart contract: Returned error: replacement transaction underpriced',
+  metadata: {
+    data: null,
+    stack: 'Error: Returned error: replacement transaction underpriced\n' +
+      '    at Object.ErrorResponse (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\web3-core-helpers\\src\\errors.js:30:19)\n' +
+      '    at onJsonrpcResult (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\web3-core-requestmanager\\src\\index.js:172:36)\n' +
+      '    at request.onreadystatechange (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\web3-providers-http\\src\\index.js:111:13)\n' +
+      '    at XMLHttpRequestEventTarget.dispatchEvent (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request-event-target.js:34:22)\n' +
+      '    at XMLHttpRequest._setReadyState (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request.js:208:14)\n' +
+      '    at XMLHttpRequest._onHttpResponseEnd (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request.js:318:14)\n' +
+      '    at IncomingMessage.<anonymous> (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\xhr2-cookies\\dist\\xml-http-request.js:289:61)\n' +
+      '    at IncomingMessage.emit (node:events:525:35)\n' +
+      '    at endReadableNT (node:internal/streams/readable:1359:12)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)',
+    timestamp: '2023-09-17T16:29:15.996Z'
+  }
+}

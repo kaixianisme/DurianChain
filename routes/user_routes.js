@@ -4,6 +4,7 @@ const { DurianData, Review , ApprovedReview} = require('../db');
 const { web3,contractAddress, abi, contract, privateKey, account, gasPrice} = require('../myweb3');
 const expressWinston = require('express-winston');
 const {transports, format } = require('winston');
+const schedule = require('node-schedule');
 
 
 const logger = require('../logger')
@@ -101,7 +102,7 @@ router.get('/get-all-data', (req, res) => {
 });
 
 
-
+// #TODO Try to only let authorized user access such as localhost
 // Endpoint to transfer data from MongoDB to Ethereum smart contract
 router.get('/transfer-data', async (req, res) => {
 	try {
@@ -374,5 +375,69 @@ router.get('/reviews', (req, res) => {
 	res.render('reviews', { farmID, treeID });
 });
 
+
+// store every durian data into smart contract every 3 hours
+schedule.scheduleJob('* */3 * * * *', async () => {
+	try {
+		const dataFromMongoDB = await DurianData.find(); // Fetch all data from MongoDB
+
+		// Loop through the data and send it to the smart contract
+		for (const data of dataFromMongoDB) {
+			const {
+				country,
+				postCode,
+				farmID,
+				treeID,
+				durianType,
+				durianID,
+				harvestTime,
+				workerID,
+			} = data;
+
+			// Create a transaction object
+			const transactionObject = {
+				from: account.address,
+				to: contractAddress,
+				gas: 1000000, // Adjust gas limit as needed
+				gasPrice,     // Set a high gas price
+				data: contract.methods
+					.addDurian(
+						country,
+						postCode,
+						farmID,
+						treeID,
+						durianType,
+						durianID,
+						harvestTime,
+						workerID
+					)
+					.encodeABI(),
+			};
+
+			// Sign the transaction
+			const signedTransaction = await web3.eth.accounts.signTransaction(
+				transactionObject,
+				privateKey
+			);
+
+			// Send the signed transaction
+			await web3.eth.sendSignedTransaction(signedTransaction.rawTransaction);
+		}
+
+		// After successful transfer, delete data from MongoDB
+		DurianData.deleteMany({})
+			.then(() => {
+				logger.info('All data removed from MongoDB'); // Log success
+				logger.info('Data transferred to the smart contract and removed from MongoDB');
+			})
+			.catch(err => {
+				logger.error('Error removing data from MongoDB:', err); // Log error
+				logger.info('Error removing data from MongoDB');
+			});
+	} catch (error) {
+		logger.error('Error transferring data to the smart contract:', error); // Log error
+		logger.info('Error transferring data to the smart contract');
+	}
+});
 
 module.exports = router;

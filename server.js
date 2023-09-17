@@ -3,10 +3,27 @@ const config = require('./config');
 const bodyParser = require('body-parser');
 const app = express();
 const port = config.PORT; // Set your desired port
+const helmet = require('helmet');
+const limitter = require('express-rate-limit');
 
 require('winston-mongodb')
 
 const logger = require('./logger')
+
+app.use(helmet()); // secure application
+
+// #TODO Turn off this limitation on /receive-data 
+// anti ddos attack
+app.use(
+    limitter({
+        windowMs: 10000,
+        max: 10,
+        message: {
+            code: 429,
+            message: 'Too many request!'
+        }
+    })
+)
 
 // Express middleware to serve static files from the 'public' folder
 app.use(express.static('views/DurianTypes'));
