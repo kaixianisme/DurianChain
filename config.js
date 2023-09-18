@@ -3,7 +3,7 @@ module.exports = {
     mongoURI: 'mongodb+srv://durian:durian123@durianchain.xpdlofs.mongodb.net/',
     privateKey: '3d4d43a11ab351b28314e1e7be5b48abb16c607224b440b4c27073924bffc3ca',
     infuraURL: 'https://sepolia.infura.io/v3/2db8bf25ea424b7898c746d2bd37470a',
-    contractAddress: '0x2420D07305fCAABAC7596415a17970f382Ba44F9',
+    contractAddress: '0x45a131181a22fE3aD58A1b878262239e99805afD',
     contractABI: [
       {
         "inputs": [
@@ -40,6 +40,16 @@ module.exports = {
           {
             "internalType": "string",
             "name": "_harvestTime",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_scanTime",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_firstPlant",
             "type": "string"
           },
           {
@@ -136,6 +146,16 @@ module.exports = {
               {
                 "internalType": "string",
                 "name": "harvestTime",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "scanTime",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "firstPlant",
                 "type": "string"
               },
               {
@@ -245,7 +265,6 @@ module.exports = {
         "type": "function"
       }
     ],
-    mongoURI: 'mongodb+srv://durian:durian123@durianchain.xpdlofs.mongodb.net/',
     secretKey: 'e70b8cc25d40bce79065a8bbbdb91cf45500ed0149f7817cf55ec152d3000ac1',
     PORT: 9000,
   };

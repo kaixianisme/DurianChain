@@ -60,6 +60,8 @@ router.post('/receive-data', (req, res) => {
 		durianType,
 		durianID,
 		harvestTime,
+		scanTime,
+		firstPlant,
 		workerID
 	} = req.body;
 
@@ -71,6 +73,8 @@ router.post('/receive-data', (req, res) => {
 		durianType,
 		durianID,
 		harvestTime,
+		scanTime,
+		firstPlant,
 		workerID
 	});
 
@@ -118,6 +122,8 @@ router.get('/transfer-data', async (req, res) => {
 				durianType,
 				durianID,
 				harvestTime,
+				scanTime,
+				firstPlant,
 				workerID,
 			} = data;
 
@@ -136,6 +142,8 @@ router.get('/transfer-data', async (req, res) => {
 						durianType,
 						durianID,
 						harvestTime,
+						scanTime,
+						firstPlant,
 						workerID
 					)
 					.encodeABI(),
@@ -238,7 +246,9 @@ router.get('/get-duriandata', async (req, res) => {
 			durianType: getDurianTypeName(parseInt(result[4])), // Use the mapping function
 			durianID: parseInt(result[5]),
 			harvestTime: result[6],
-			workerID: parseInt(result[7]),
+			scanTime: result[7],
+			firstPlant: result[8],
+			workerID: parseInt(result[9]),
 		};
 
 		// Calculate the harvest duration
@@ -391,6 +401,8 @@ schedule.scheduleJob('* * */3 * * *', async () => {
 				durianType,
 				durianID,
 				harvestTime,
+				scanTime,
+				firstPlant,
 				workerID,
 			} = data;
 
@@ -409,6 +421,8 @@ schedule.scheduleJob('* * */3 * * *', async () => {
 						durianType,
 						durianID,
 						harvestTime,
+						scanTime,
+						firstPlant,
 						workerID
 					)
 					.encodeABI(),

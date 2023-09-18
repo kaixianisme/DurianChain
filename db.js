@@ -16,25 +16,27 @@ const durianSchema = new mongoose.Schema({
 	durianType: Number,
 	durianID: Number,
 	harvestTime: String,
+	scanTime: String,  
+	firstPlant: String,
 	workerID: Number
 });
 
 const reviewSchema = new mongoose.Schema({
 	farmID: {
 		type: Number,
-		required: true, // Make the farmID field required
+		required: true, 
 	},
 	treeID: {
 		type: Number,
-		required: true, // Make the treeID field required
+		required: true, 
 	},
 	rating: {
 		type: Number,
-		required: true, // Make the rating field required
+		required: true, 
 	},
 	comment: {
 		type: String,
-		required: true, // Make the comment field required
+		required: true, 
 	},
 });
 
@@ -44,7 +46,6 @@ const approvedReviewSchema = new mongoose.Schema({
 	treeID: Number,
 	rating: Number,
 	comment: String,
-	// Add any other fields you need for approved reviews
 });
 
 // Create and export models based on the schemas
