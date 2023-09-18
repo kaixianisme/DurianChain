@@ -377,7 +377,7 @@ router.get('/reviews', (req, res) => {
 
 
 // store every durian data into smart contract every 3 hours
-schedule.scheduleJob('* */3 * * * *', async () => {
+schedule.scheduleJob('* * */3 * * *', async () => {
 	try {
 		const dataFromMongoDB = await DurianData.find(); // Fetch all data from MongoDB
 
