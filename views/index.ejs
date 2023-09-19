@@ -38,6 +38,11 @@ body {
             color: #007bff;
         }
 
+        #treeAge {
+            font-weight: bold;
+            color: #007bff;
+        }
+
         /* Styles for mobile devices */
         @media screen and (max-width: 480px) {
             .container {
@@ -82,7 +87,7 @@ body {
         <p>Harvest Time: <%= durianData.harvestTime %></p>
         <p>Harvest Duration: <span id="harvestDuration"><%= harvestDuration %></span></p>
         <p>Scan Time: <%= durianData.scanTime %></p>
-        <p>Tree Age: <span id="harvestDuration"><%= durianData.firstPlant %></span></p>
+        <p>Tree Age: <span id="treeAge"></span> year(s)</p>
         <p>Worker ID: <%= durianData.workerID %></p>
         <button id="viewTreeButton">View Durian Tree</button>
     </div>
@@ -109,6 +114,22 @@ updateHarvestDuration();
 
 // Update the harvest duration every second (you can adjust the interval as needed)
 setInterval(updateHarvestDuration, 1000);
+
+ // Function to calculate and update the tree age
+ function updateTreeAge() {
+        const firstPlantDate = new Date("<%= durianData.firstPlant %>");
+        const currentDate = new Date();
+        const ageInMilliseconds = currentDate - firstPlantDate;
+        const ageInYears = ageInMilliseconds / (1000 * 60 * 60 * 24 * 365); // Assuming an average year length of 365 days
+
+        // Update the tree age element
+        const treeAgeElement = document.getElementById("treeAge");
+        treeAgeElement.textContent = ageInYears.toFixed(2); // Displaying with two decimal places
+    }
+
+    // Update the tree age immediately when the page loads
+    updateTreeAge();
+
 
 // Add this JavaScript code at the end of your "DurianTypes.ejs" file
 document.getElementById('viewTreeButton').addEventListener('click', function () {

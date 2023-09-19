@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { DurianData } = require('../db');
+const logger = require('../logger')
 
 
 // Define your /receive-data route here
