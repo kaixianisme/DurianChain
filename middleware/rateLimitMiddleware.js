@@ -7,6 +7,13 @@ const adminLoginLimiter = rateLimit({
   message: 'Too many login attempts. Please try again later.',
 });
 
+const reqLimitter = rateLimit({
+  windowMs: 60 * 1000, // 1 minute window
+  max: 5, // 5 requests per windowMs
+  message: 'Too many request!',
+});
+
 module.exports = {
   adminLoginLimiter,
+  reqLimitter,
 };

@@ -17,6 +17,7 @@
     "express-session": "^1.17.3",
     "express-winston": "^4.2.0",
     "helmet": "^7.0.0",
+    "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.0.0",
     "mongoose": "^7.5.0",
     "node-schedule": "^2.1.1",

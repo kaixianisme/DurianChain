@@ -1,9 +1,11 @@
 const express = require('express');
 const router = express.Router();
+const { DurianData } = require('../db');
+
 
 // Define your /receive-data route here
 // API endpoint to receive and store data
-app.post('/receive-data', (req, res) => {
+router.post('/', (req, res) => {
 	const {
 		country,
 		postCode,
@@ -39,22 +41,22 @@ app.post('/receive-data', (req, res) => {
 
 
 // Create a middleware to check the request's origin
-function validateRequestOrigin(req, res, next) {
-    const allowedOrigins = ['http://your-mobile-app.com']; // Replace with your app's URL
+// function validateRequestOrigin(req, res, next) {
+//     const allowedOrigins = ['http://your-mobile-app.com']; // Replace with your app's URL
   
-    const origin = req.headers.origin;
-    if (allowedOrigins.includes(origin)) {
-      // Allow the request if it comes from an approved origin
-      next();
-    } else {
-      res.status(403).json({ message: 'Access denied.' });
-    }
-  }
+//     const origin = req.headers.origin;
+//     if (allowedOrigins.includes(origin)) {
+//       // Allow the request if it comes from an approved origin
+//       next();
+//     } else {
+//       res.status(403).json({ message: 'Access denied.' });
+//     }
+//   }
   
-  // Apply the middleware to your /receive-data route
-  router.post('/receive-data', validateRequestOrigin, (req, res) => {
-    // Your /receive-data route logic here
-  });
+//   // Apply the middleware to your /receive-data route
+//   router.post('/receive-data', validateRequestOrigin, (req, res) => {
+//     // Your /receive-data route logic here
+//   });
   
 
 

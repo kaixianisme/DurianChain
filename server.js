@@ -4,26 +4,13 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = config.PORT; // Set your desired port
 const helmet = require('helmet');
-const limitter = require('express-rate-limit');
+const { reqLimitter } = require('./middleware/rateLimitMiddleware');
 
 require('winston-mongodb')
 
 const logger = require('./logger')
 
-app.use(helmet()); // secure application
-
-// #TODO Turn off this limitation on /receive-data 
-// anti ddos attack
-app.use(
-    limitter({
-        windowMs: 10000,
-        max: 10,
-        message: {
-            code: 429,
-            message: 'Too many request!'
-        }
-    })
-)
+// app.use(helmet()); // secure application
 
 // Express middleware to serve static files from the 'public' folder
 app.use(express.static('views/DurianTypes'));
@@ -36,13 +23,17 @@ app.use(session({ secret: config.secretKey, resave: true, saveUninitialized: tru
 
 app.use(bodyParser.json());
 
-const userRoutes = require('./routes/user_routes');
-// Use the user routes
-app.use('/', userRoutes);
-
 const adminRoutes = require('./routes/admin_routes');
 // Use the user routes
 app.use('/admin', adminRoutes);
+
+const dataRoutes = require('./routes/data_routes');
+// Use the data routes
+app.use('/receive-data', dataRoutes);
+
+const userRoutes = require('./routes/user_routes');
+// Use the user routes
+app.use('/', reqLimitter, userRoutes);
 
 app.get("*", (req, res) => {
 	res.status(404).render('404.ejs');

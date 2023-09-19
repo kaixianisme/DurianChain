@@ -6,6 +6,8 @@ const expressWinston = require('express-winston');
 const {transports, format } = require('winston');
 const schedule = require('node-schedule');
 
+// Store the reference to the job
+let cronJob;
 
 const logger = require('../logger')
 
@@ -386,9 +388,97 @@ router.get('/reviews', (req, res) => {
 });
 
 
-// store every durian data into smart contract every 3 hours
-schedule.scheduleJob('* * */3 * * *', async () => {
-	try {
+// // store every durian data into smart contract every 3 hours
+// const job = schedule.scheduleJob('* * */3 * * *', async () => {
+// 	logger.info('Starting cronjob...')
+// 	try {
+// 		const dataFromMongoDB = await DurianData.find(); // Fetch all data from MongoDB
+
+// 		// Loop through the data and send it to the smart contract
+// 		for (const data of dataFromMongoDB) {
+// 			const {
+// 				country,
+// 				postCode,
+// 				farmID,
+// 				treeID,
+// 				durianType,
+// 				durianID,
+// 				harvestTime,
+// 				scanTime,
+// 				firstPlant,
+// 				workerID,
+// 			} = data;
+
+// 			// Create a transaction object
+// 			const transactionObject = {
+// 				from: account.address,
+// 				to: contractAddress,
+// 				gas: 1000000, // Adjust gas limit as needed
+// 				gasPrice,     // Set a high gas price
+// 				data: contract.methods
+// 					.addDurian(
+// 						country,
+// 						postCode,
+// 						farmID,
+// 						treeID,
+// 						durianType,
+// 						durianID,
+// 						harvestTime,
+// 						scanTime,
+// 						firstPlant,
+// 						workerID
+// 					)
+// 					.encodeABI(),
+// 			};
+
+// 			// Sign the transaction
+// 			const signedTransaction = await web3.eth.accounts.signTransaction(
+// 				transactionObject,
+// 				privateKey
+// 			);
+
+// 			// Send the signed transaction
+// 			await web3.eth.sendSignedTransaction(signedTransaction.rawTransaction);
+// 		}
+
+// 		// After successful transfer, delete data from MongoDB
+// 		DurianData.deleteMany({})
+// 			.then(() => {
+// 				logger.info('All data removed from MongoDB'); // Log success
+// 				logger.info('Data transferred to the smart contract and removed from MongoDB');
+// 			})
+// 			.catch(err => {
+// 				logger.error('Error removing data from MongoDB:', err); // Log error
+// 				logger.info('Error removing data from MongoDB');
+// 			});
+// 	} catch (error) {
+// 		logger.error('Error transferring data to the smart contract:', error); // Log error
+// 		logger.info('Error transferring data to the smart contract');
+// 	}
+// });
+
+// Define a function to cancel the cron job
+function cancelJob() {
+	if (cronJob) {
+	  cronJob.cancel();
+	  logger.info('Cron job canceled');
+	} else {
+	  logger.info('No cron job running to cancel');
+	}
+  }
+
+  // Define the route to cancel the cron job
+router.get('/cancel-job', (req, res) => {
+	cancelJob();
+	res.status(200).send('Cron job cancellation requested');
+  });
+
+// Define the route to start the cron job
+router.get('/start-job', (req, res) => {
+	// Schedule the cron job
+	cronJob = schedule.scheduleJob('* * */3 * * *', async () => {
+	  logger.info('Starting cron job...')
+	  try {
 		const dataFromMongoDB = await DurianData.find(); // Fetch all data from MongoDB
 
 		// Loop through the data and send it to the smart contract
@@ -452,6 +542,9 @@ schedule.scheduleJob('* * */3 * * *', async () => {
 		logger.error('Error transferring data to the smart contract:', error); // Log error
 		logger.info('Error transferring data to the smart contract');
 	}
-});
+	});
+	res.status(200).send('Cron job started');
+  });
+  
 
 module.exports = router;
