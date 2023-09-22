@@ -3541,3 +3541,70 @@
     timestamp: '2023-09-19T01:28:21.556Z'
   }
 }
+{
+  level: 'error',
+  message: 'HTTP GET /get-duriandata?farmID=333&treeID=5678&durianID=1234568',
+  metadata: {
+    meta: {
+      req: {
+        url: '/get-duriandata?farmID=333&treeID=5678&durianID=1234568',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'cache-control': 'max-age=0',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'sec-ch-ua-platform': '"Windows"',
+          'upgrade-insecure-requests': '1',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+          'sec-fetch-site': 'none',
+          'sec-fetch-mode': 'navigate',
+          'sec-fetch-user': '?1',
+          'sec-fetch-dest': 'document',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AK-RFoDQGyt72eXlELPOm2-lqh0jYQjNI.mHRCG4Ms9mEYGMFPunHXp3JBdQWzGH4vt2wIgdgwO1s'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/get-duriandata?farmID=333&treeID=5678&durianID=1234568',
+        query: { farmID: '333', treeID: '5678', durianID: '1234568' }
+      },
+      res: { statusCode: 500 },
+      responseTime: 1086
+    },
+    timestamp: '2023-09-19T10:33:40.426Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /get-duriandata?farmID=333&treeID=5678&durianID=1234568',
+  metadata: {
+    meta: {
+      req: {
+        url: '/get-duriandata?farmID=333&treeID=5678&durianID=1234568',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          accept: '*/*',
+          'sec-fetch-site': 'none',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AKzVY6HNHclDr45QEdTe6qmhJ143PjpXw.WnlYIuvmadrTcwo1sWi95T6UPTx%2Fbb%2BunET5cCn6s00',
+          'if-none-match': 'W/"11f9-4vGHa7A35sEQ9nxYy+cYxnoWNhA"'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/get-duriandata?farmID=333&treeID=5678&durianID=1234568',
+        query: { farmID: '333', treeID: '5678', durianID: '1234568' }
+      },
+      res: { statusCode: 500 },
+      responseTime: 249
+    },
+    timestamp: '2023-09-19T10:33:40.855Z'
+  }
+}

@@ -73,6 +73,20 @@ body {
             text-decoration: none;
         }
 
+        .rate-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #3f51b5;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+        }
+
+
     </style>
 </head>
 <body>
@@ -81,15 +95,18 @@ body {
         <p>Country: <%= durianData.country %></p>
         <p>Post Code: <%= durianData.postCode %></p>
         <p>Farm ID: <%= durianData.farmID %></p>
-        <p>Tree ID: <%= durianData.treeID %></p>
+        <p>Tree ID: <%= durianData.treeID %></p>         
+        <button id="viewTreeButton">View Durian Tree</button>
         <p>Durian Type: <%= durianData.durianType %></p>
         <p>Durian ID: <%= durianData.durianID %></p>
         <p>Harvest Time: <%= durianData.harvestTime %></p>
         <p>Harvest Duration: <span id="harvestDuration"><%= harvestDuration %></span></p>
-        <p>Scan Time: <%= durianData.scanTime %></p>
+        <!-- <p>Scan Time: <%= durianData.scanTime %></p> -->
         <p>Tree Age: <span id="treeAge"></span> year(s)</p>
         <p>Worker ID: <%= durianData.workerID %></p>
-        <button id="viewTreeButton">View Durian Tree</button>
+            <!-- "Rate this tree!" button -->
+    <a class="rate-button" href="/reviews?farmID=<%= durianData.farmID %>&treeID=<%= durianData.treeID %>">Rate this durian!</a>
+
     </div>
 
 
