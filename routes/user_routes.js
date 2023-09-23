@@ -271,36 +271,44 @@ router.get('/DurianTypes', (req, res) => {
 });
 
 router.post('/store-review', async (req, res) => {
-	try {
-		// Extract data from the request body
-		const { farmID, treeID, rating, comment } = req.body;
+    try {
+        // Extract data from the request body
+        const { farmID, treeID, comment, creaminess, fragment, seedSize, taste, sweetness, bitterness, texture, aroma } = req.body;
 
-		// Create a new review document
-		const newReview = new Review({
-			farmID,
-			treeID,
-			rating,
-			comment,
-		});
+        // Create a new review document
+        const newReview = new Review({
+            farmID,
+            treeID,
+            comment,
+			creaminess,
+			fragment,
+			seedSize,
+			taste,
+			sweetness,
+			bitterness,
+			texture,
+			aroma
+        });
 
-		// Validate the new review document
-		const validationError = newReview.validateSync();
+        // Validate the new review document
+        const validationError = newReview.validateSync();
 
-		if (validationError) {
-			// If there's a validation error, respond with a bad request status and error message
-			res.status(400).send('Validation error: All fields are required.');
-		} else {
-			// Save the review to the database
-			await newReview.save();
+        if (validationError) {
+            // If there's a validation error, respond with a bad request status and error message
+            return res.status(400).send('Validation error: All fields are required.');
+        }
 
-			// Respond with a success message
-			res.status(200).send('Review stored successfully');
-		}
-	} catch (error) {
+        // Save the review to the database
+        await newReview.save();
+
+        // Respond with a success message
+        res.status(200).send('Review stored successfully');
+    } catch (error) {
         logger.error('Error storing review:', error);
-		res.status(500).send('Error storing review');
-	}
+        res.status(500).send('Error storing review');
+    }
 });
+
 
 // Create a route to add reviews from the database to the smart contract
 router.get('/add-review-to-contract', async (req, res) => {

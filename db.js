@@ -7,7 +7,7 @@ mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
 	.then(() => console.log('MongoDB connected'))
 	.catch(err => console.error(err));
 
-// Define a MongoDB schema
+// Define a MongoDB schema for durians
 const durianSchema = new mongoose.Schema({
 	country: String,
 	postCode: Number,
@@ -16,27 +16,56 @@ const durianSchema = new mongoose.Schema({
 	durianType: Number,
 	durianID: Number,
 	harvestTime: String,
-	scanTime: String,  
+	scanTime: String,
 	firstPlant: String,
 	workerID: Number
 });
 
+// Define a MongoDB schema for reviews, including additional categories
 const reviewSchema = new mongoose.Schema({
 	farmID: {
 		type: Number,
-		required: true, 
+		required: true,
 	},
 	treeID: {
 		type: Number,
-		required: true, 
+		required: true,
 	},
-	rating: {
+	creaminess: {
 		type: Number,
-		required: true, 
+		required: true,
+	},
+	fragment: {
+		type: Number,
+		required: true,
+	},
+	seedSize: {
+		type: Number,
+		required: true,
+	},
+	taste: {
+		type: Number,
+		required: true,
+	},
+	sweetness: {
+		type: Number,
+		required: true,
+	},
+	bitterness: {
+		type: Number,
+		required: true,
+	},
+	texture: {
+		type: Number,
+		required: true,
+	},
+	aroma: {
+		type: Number,
+		required: true,
 	},
 	comment: {
 		type: String,
-		required: true, 
+		required: true,
 	},
 });
 

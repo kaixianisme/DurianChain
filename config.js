@@ -3,7 +3,7 @@ module.exports = {
     mongoURI: 'mongodb+srv://durian:durian123@durianchain.xpdlofs.mongodb.net/',
     privateKey: '3d4d43a11ab351b28314e1e7be5b48abb16c607224b440b4c27073924bffc3ca',
     infuraURL: 'https://sepolia.infura.io/v3/2db8bf25ea424b7898c746d2bd37470a',
-    contractAddress: '0x45a131181a22fE3aD58A1b878262239e99805afD',
+    contractAddress: '0xd38EF75EB1b06Bb9749557428aBD61E471Bd6E35',
     contractABI: [
       {
         "inputs": [
@@ -77,7 +77,42 @@ module.exports = {
           },
           {
             "internalType": "uint8",
-            "name": "_rating",
+            "name": "_creaminess",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "_fragment",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "_seedSize",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "_taste",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "_sweetness",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "_bitterness",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "_texture",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "_aroma",
             "type": "uint8"
           },
           {
@@ -228,7 +263,42 @@ module.exports = {
             "components": [
               {
                 "internalType": "uint8",
-                "name": "rating",
+                "name": "creaminess",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "fragment",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "seedSize",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "taste",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "sweetness",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "bitterness",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "texture",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "aroma",
                 "type": "uint8"
               },
               {

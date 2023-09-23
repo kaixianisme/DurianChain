@@ -81,15 +81,103 @@
         <input type="hidden" name="farmID" value="<%= farmID %>">
         <input type="hidden" name="treeID" value="<%= treeID %>">
         
-        <!-- Rating input (star rating system) -->
-        <div class="star-rating">
-            <i class="fas fa-star" data-rating="1"></i>
-            <i class="fas fa-star" data-rating="2"></i>
-            <i class="fas fa-star" data-rating="3"></i>
-            <i class="fas fa-star" data-rating="4"></i>
-            <i class="fas fa-star" data-rating="5"></i>
-            <input type="hidden" name="rating" value="0" id="selectedRating"> <!-- Hidden input to store the selected rating -->
-        </div>
+  <!-- Star rating for creaminess -->
+  <label for="creaminess">Creaminess:</label>
+  <div class="star-rating">
+      <!-- Replace 'creaminess' with the actual category name -->
+      <i class="fas fa-star" data-rating="1"></i>
+      <i class="fas fa-star" data-rating="2"></i>
+      <i class="fas fa-star" data-rating="3"></i>
+      <i class="fas fa-star" data-rating="4"></i>
+      <i class="fas fa-star" data-rating="5"></i>
+      <input type="hidden" name="creaminess" value="0" class="selectedRating">
+  </div>
+
+  <!-- Repeat the same structure for other categories -->
+  
+  <!-- Star rating for fragment -->
+  <label for="fragment">Fragment:</label>
+  <div class="star-rating">
+      <!-- Replace 'fragment' with the actual category name -->
+      <i class="fas fa-star" data-rating="1"></i>
+      <i class="fas fa-star" data-rating="2"></i>
+      <i class="fas fa-star" data-rating="3"></i>
+      <i class="fas fa-star" data-rating="4"></i>
+      <i class="fas fa-star" data-rating="5"></i>
+      <input type="hidden" name="fragment" value="0" class="selectedRating">
+  </div>
+
+  <!-- Star rating for size of seed -->
+  <label for="seedSize">Size of seed:</label>
+  <div class="star-rating">
+      <!-- Replace 'fragment' with the actual category name -->
+      <i class="fas fa-star" data-rating="1"></i>
+      <i class="fas fa-star" data-rating="2"></i>
+      <i class="fas fa-star" data-rating="3"></i>
+      <i class="fas fa-star" data-rating="4"></i>
+      <i class="fas fa-star" data-rating="5"></i>
+      <input type="hidden" name="seedSize" value="0" class="selectedRating">
+  </div>
+
+  <!-- Star rating for taste -->
+  <label for="taste">taste:</label>
+  <div class="star-rating">
+      <!-- Replace 'taste' with the actual category name -->
+      <i class="fas fa-star" data-rating="1"></i>
+      <i class="fas fa-star" data-rating="2"></i>
+      <i class="fas fa-star" data-rating="3"></i>
+      <i class="fas fa-star" data-rating="4"></i>
+      <i class="fas fa-star" data-rating="5"></i>
+      <input type="hidden" name="taste" value="0" class="selectedRating">
+  </div>
+
+    <!-- Star rating for sweetness -->
+    <label for="sweetness">sweetness:</label>
+    <div class="star-rating">
+        <!-- Replace 'sweetness' with the actual category name -->
+        <i class="fas fa-star" data-rating="1"></i>
+        <i class="fas fa-star" data-rating="2"></i>
+        <i class="fas fa-star" data-rating="3"></i>
+        <i class="fas fa-star" data-rating="4"></i>
+        <i class="fas fa-star" data-rating="5"></i>
+        <input type="hidden" name="sweetness" value="0" class="selectedRating">
+    </div>
+
+      <!-- Star rating for bitterness -->
+  <label for="bitterness">bitterness:</label>
+  <div class="star-rating">
+      <!-- Replace 'bitterness' with the actual category name -->
+      <i class="fas fa-star" data-rating="1"></i>
+      <i class="fas fa-star" data-rating="2"></i>
+      <i class="fas fa-star" data-rating="3"></i>
+      <i class="fas fa-star" data-rating="4"></i>
+      <i class="fas fa-star" data-rating="5"></i>
+      <input type="hidden" name="bitterness" value="0" class="selectedRating">
+  </div>
+
+    <!-- Star rating for texture -->
+    <label for="texture">texture:</label>
+    <div class="star-rating">
+        <!-- Replace 'texture' with the actual category name -->
+        <i class="fas fa-star" data-rating="1"></i>
+        <i class="fas fa-star" data-rating="2"></i>
+        <i class="fas fa-star" data-rating="3"></i>
+        <i class="fas fa-star" data-rating="4"></i>
+        <i class="fas fa-star" data-rating="5"></i>
+        <input type="hidden" name="texture" value="0" class="selectedRating">
+    </div>
+
+      <!-- Star rating for aroma -->
+  <label for="aroma">aroma:</label>
+  <div class="star-rating">
+      <!-- Replace 'aroma' with the actual category name -->
+      <i class="fas fa-star" data-rating="1"></i>
+      <i class="fas fa-star" data-rating="2"></i>
+      <i class="fas fa-star" data-rating="3"></i>
+      <i class="fas fa-star" data-rating="4"></i>
+      <i class="fas fa-star" data-rating="5"></i>
+      <input type="hidden" name="aroma" value="0" class="selectedRating">
+  </div>
         
         <!-- Comment input -->
         <label for="comment">Comment:</label>
@@ -100,59 +188,62 @@
     </form>
     
     <script>
-        // JavaScript code for the star rating system
-        const starRating = document.querySelector('.star-rating');
-        const selectedRatingInput = document.getElementById('selectedRating');
+        // JavaScript code for the star rating system for each category
+        const starRatings = document.querySelectorAll('.star-rating');
+        
+        starRatings.forEach((starRating) => {
+            starRating.addEventListener('click', (e) => {
+                if (e.target.tagName === 'I') {
+                    const rating = parseInt(e.target.getAttribute('data-rating'));
+                    const selectedRatingInput = starRating.querySelector('.selectedRating');
+                    selectedRatingInput.value = rating;
 
-        starRating.addEventListener('click', (e) => {
-            if (e.target.tagName === 'I') {
-                const rating = parseInt(e.target.getAttribute('data-rating'));
-                selectedRatingInput.value = rating;
-
-                // Highlight selected stars
-                for (let i = 1; i <= 5; i++) {
-                    const star = starRating.querySelector(`[data-rating="${i}"]`);
-                    if (i <= rating) {
-                        star.classList.add('active');
-                    } else {
-                        star.classList.remove('active');
+                    // Highlight selected stars
+                    for (let i = 1; i <= 5; i++) {
+                        const star = starRating.querySelector(`[data-rating="${i}"]`);
+                        if (i <= rating) {
+                            star.classList.add('active');
+                        } else {
+                            star.classList.remove('active');
+                        }
                     }
                 }
-            }
+            });
         });
 
-        // JavaScript code to send form data as JSON (same as before)
+        // JavaScript code to send form data as JSON
         document.getElementById('submitReview').addEventListener('click', function () {
-            const farmID = document.querySelector('input[name="farmID"]').value;
-            const treeID = document.querySelector('input[name="treeID"]').value;
-            const rating = selectedRatingInput.value; // Get the selected rating
-            const comment = document.querySelector('textarea[name="comment"]').value;
+    const farmID = document.querySelector('input[name="farmID"]').value;
+    const treeID = document.querySelector('input[name="treeID"]').value;
+    const comment = document.querySelector('textarea[name="comment"]').value;
+    const creaminess = parseInt(document.querySelector('input[name="creaminess"]').value);
+    const fragment = parseInt(document.querySelector('input[name="fragment"]').value);
+    const seedSize = parseInt(document.querySelector('input[name="seedSize"]').value);
+    const taste = parseInt(document.querySelector('input[name="taste"]').value);
+    const sweetness = parseInt(document.querySelector('input[name="sweetness"]').value);
+    const bitterness = parseInt(document.querySelector('input[name="bitterness"]').value);
+    const texture = parseInt(document.querySelector('input[name="texture"]').value);
+    const aroma = parseInt(document.querySelector('input[name="aroma"]').value);
+    // Extract ratings for other categories here
 
-             // Check if both rating and comment are empty
-        if (rating === "0" && comment.trim() === "") {
-            document.getElementById('error-message').textContent = "Please provide a rating and comment.";
-            return; // Prevent form submission
-        }
 
-        // Check if rating is empty
-        if (rating === "0") {
-            document.getElementById('error-message').textContent = "Please provide a rating.";
-            return; // Prevent form submission
-        }
+    // Create a JSON object with the form data
+    const reviewData = {
+        farmID: farmID,
+        treeID: treeID,
+        comment: comment,
+        creaminess: creaminess,
+        fragment: fragment,
+        seedSize: seedSize,
+        taste: taste,
+        sweetness: sweetness,
+        bitterness: bitterness,
+        texture: texture,
+        aroma: aroma
 
-        // Check if comment is empty
-        if (comment.trim() === "") {
-            document.getElementById('error-message').textContent = "Please provide a comment.";
-            return; // Prevent form submission
-        }
+    };
 
-        // Create a JSON object with the form data
-        const reviewData = {
-            farmID: farmID,
-            treeID: treeID,
-            rating: rating,
-            comment: comment
-        };
+    console.log(reviewData);
 
         // Send the JSON data to the server
         fetch('/store-review', {

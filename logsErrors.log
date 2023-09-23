@@ -1767,3 +1767,194 @@
     timestamp: '2023-09-19T10:33:40.855Z'
   }
 }
+{
+  level: 'error',
+  message: 'HTTP GET /reviews?farmID=333&treeID=5678',
+  metadata: {
+    meta: {
+      req: {
+        url: '/reviews?farmID=333&treeID=5678',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'cache-control': 'max-age=0',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'sec-ch-ua-platform': '"Windows"',
+          'upgrade-insecure-requests': '1',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'navigate',
+          'sec-fetch-user': '?1',
+          'sec-fetch-dest': 'document',
+          referer: 'http://localhost:9000/get-duriandata?farmID=333&treeID=5678&durianID=1234568',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AI0_FU7lkMFDt1SzJuxR8LR5xLk2uu-Ce.B%2BJ%2BpOLuEByBq5F2xnFiKp4DAGs6JPiIQ1d3iP%2FlrS0',
+          'if-none-match': 'W/"1cf1-/YDn1ZLeUs8xD2Eq1DX385Ca4to"'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/reviews?farmID=333&treeID=5678',
+        query: { farmID: '333', treeID: '5678' }
+      },
+      res: { statusCode: 500 },
+      responseTime: 3
+    },
+    timestamp: '2023-09-23T06:37:29.857Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /reviews?farmID=333&treeID=5678',
+  metadata: {
+    meta: {
+      req: {
+        url: '/reviews?farmID=333&treeID=5678',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          accept: '*/*',
+          'sec-fetch-site': 'none',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AI0_FU7lkMFDt1SzJuxR8LR5xLk2uu-Ce.B%2BJ%2BpOLuEByBq5F2xnFiKp4DAGs6JPiIQ1d3iP%2FlrS0',
+          'if-none-match': 'W/"1cf1-/YDn1ZLeUs8xD2Eq1DX385Ca4to"'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/reviews?farmID=333&treeID=5678',
+        query: { farmID: '333', treeID: '5678' }
+      },
+      res: { statusCode: 500 },
+      responseTime: 2
+    },
+    timestamp: '2023-09-23T06:37:29.956Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Error storing review: rating is not defined',
+  metadata: {
+    stack: 'ReferenceError: rating is not defined\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs-Git\\routes\\user_routes.js:282:4\n' +
+      '    at Layer.handle [as handle_request] (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+      '    at next (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+      '    at Route.dispatch (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\express\\lib\\router\\route.js:114:3)\n' +
+      '    at Layer.handle [as handle_request] (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+      '    at Function.process_params (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+      '    at next (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+      '    at Layer.handle [as handle_request] (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\express\\lib\\router\\layer.js:91:12)\n' +
+      '    at trim_prefix (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\express\\lib\\router\\index.js:328:13)\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\express\\lib\\router\\index.js:286:9\n' +
+      '    at Function.process_params (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+      '    at next (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+      '    at Layer.handle [as handle_request] (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\express\\lib\\router\\layer.js:91:12)\n' +
+      '    at trim_prefix (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\express\\lib\\router\\index.js:328:13)\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\express\\lib\\router\\index.js:286:9',
+    timestamp: '2023-09-23T08:54:40.146Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP POST /store-review',
+  metadata: {
+    meta: {
+      req: {
+        url: '/store-review',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'content-length': '69',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-platform': '"Windows"',
+          'sec-ch-ua-mobile': '?0',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          'content-type': 'application/json',
+          accept: '*/*',
+          origin: 'http://localhost:9000',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          referer: 'http://localhost:9000/reviews?farmID=333&treeID=5678',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3ATT2rSglaYaMyj4N_llfVNAEggwsjRC77.3235F8tiz%2BLmWmDkxdubLJTJ03GvlVX4fIshAxw1TMA'
+        },
+        method: 'POST',
+        httpVersion: '1.1',
+        originalUrl: '/store-review',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 3
+    },
+    timestamp: '2023-09-23T08:54:40.150Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Error storing review: creaminess is not defined',
+  metadata: {
+    stack: 'ReferenceError: creaminess is not defined\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs-Git\\routes\\user_routes.js:283:4\n' +
+      '    at Layer.handle [as handle_request] (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+      '    at next (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+      '    at Route.dispatch (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\express\\lib\\router\\route.js:114:3)\n' +
+      '    at Layer.handle [as handle_request] (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+      '    at Function.process_params (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+      '    at next (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+      '    at Layer.handle [as handle_request] (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\express\\lib\\router\\layer.js:91:12)\n' +
+      '    at trim_prefix (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\express\\lib\\router\\index.js:328:13)\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\express\\lib\\router\\index.js:286:9\n' +
+      '    at Function.process_params (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+      '    at next (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+      '    at Layer.handle [as handle_request] (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\express\\lib\\router\\layer.js:91:12)\n' +
+      '    at trim_prefix (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\express\\lib\\router\\index.js:328:13)\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\express\\lib\\router\\index.js:286:9',
+    timestamp: '2023-09-23T09:07:45.584Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP POST /store-review',
+  metadata: {
+    meta: {
+      req: {
+        url: '/store-review',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'content-length': '68',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-platform': '"Windows"',
+          'sec-ch-ua-mobile': '?0',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          'content-type': 'application/json',
+          accept: '*/*',
+          origin: 'http://localhost:9000',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          referer: 'http://localhost:9000/reviews?farmID=333&treeID=5678',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3ApndTGISSRI4IAFp_SbCuP0mgIdJm5roT.7UAo89VbqDdoKUckat9xKlbKkUGLUNTZp8iDGxK4%2Fas'
+        },
+        method: 'POST',
+        httpVersion: '1.1',
+        originalUrl: '/store-review',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 4
+    },
+    timestamp: '2023-09-23T09:07:45.589Z'
+  }
+}
