@@ -4462,3 +4462,675 @@
     timestamp: '2023-09-23T09:55:33.634Z'
   }
 }
+{
+  level: 'error',
+  message: 'HTTP GET /add-review-to-contract',
+  metadata: {
+    meta: {
+      req: {
+        url: '/add-review-to-contract',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          'sec-ch-ua-platform': '"Windows"',
+          accept: '*/*',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          referer: 'http://localhost:9000/admin/dashboard',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3A0ih6q08Az12UGkfTFTG2d48jHQBoQoHb.Oj70a1th%2BbjaIAFVZzfzOj%2FFu1DGq10Q%2B9WUGhKETPM',
+          'if-none-match': 'W/"4a-cyZBAJSoP8/NLALwGEX7HG8xaaE"'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/add-review-to-contract',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 12
+    },
+    timestamp: '2023-09-24T06:17:53.416Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /add-review-to-contract',
+  metadata: {
+    meta: {
+      req: {
+        url: '/add-review-to-contract',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          'sec-ch-ua-platform': '"Windows"',
+          accept: '*/*',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          referer: 'http://localhost:9000/admin/dashboard',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3A78otR47ZW7ZDO2uYWNemMr5ldZOOVVSc.vgT9wunqHqcY%2FyOxM4KaMEhi7tV4isCMb7v9xioFMSk'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/add-review-to-contract',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 13
+    },
+    timestamp: '2023-09-24T06:19:30.270Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /add-review-to-contract',
+  metadata: {
+    meta: {
+      req: {
+        url: '/add-review-to-contract',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          'sec-ch-ua-platform': '"Windows"',
+          accept: '*/*',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          referer: 'http://localhost:9000/admin/dashboard',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3A78otR47ZW7ZDO2uYWNemMr5ldZOOVVSc.vgT9wunqHqcY%2FyOxM4KaMEhi7tV4isCMb7v9xioFMSk'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/add-review-to-contract',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 15
+    },
+    timestamp: '2023-09-24T06:19:39.735Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /add-review-to-contract',
+  metadata: {
+    meta: {
+      req: {
+        url: '/add-review-to-contract',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          'sec-ch-ua-platform': '"Windows"',
+          accept: '*/*',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          referer: 'http://localhost:9000/admin/dashboard',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3A78otR47ZW7ZDO2uYWNemMr5ldZOOVVSc.vgT9wunqHqcY%2FyOxM4KaMEhi7tV4isCMb7v9xioFMSk'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/add-review-to-contract',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 11
+    },
+    timestamp: '2023-09-24T06:21:31.112Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /add-review-to-contract',
+  metadata: {
+    meta: {
+      req: {
+        url: '/add-review-to-contract',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          'sec-ch-ua-platform': '"Windows"',
+          accept: '*/*',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          referer: 'http://localhost:9000/admin/dashboard',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3Afg0UqB8Jshwr6N0shFP-c4jQn4kjqZyj.z6qYL8k%2B440scx3uVsK2YGe7SOvpUB0lZWnOxk7%2F7pg'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/add-review-to-contract',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 12
+    },
+    timestamp: '2023-09-24T06:23:37.160Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /add-review-to-contract',
+  metadata: {
+    meta: {
+      req: {
+        url: '/add-review-to-contract',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          'sec-ch-ua-platform': '"Windows"',
+          accept: '*/*',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          referer: 'http://localhost:9000/admin/dashboard',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AJawbontmObXFU-tDxtsFtgGow1XOSLTV.LePoZgcutkFBh5hkHO9qBhfIZtb6HdQ9Oe9HJBzHX%2Bc'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/add-review-to-contract',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 13
+    },
+    timestamp: '2023-09-24T06:24:53.679Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /add-review-to-contract',
+  metadata: {
+    meta: {
+      req: {
+        url: '/add-review-to-contract',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          'sec-ch-ua-platform': '"Windows"',
+          accept: '*/*',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          referer: 'http://localhost:9000/admin/dashboard',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3A9aKaNNrMwft4n5NZM1fN196ZfsbLn4iN.8o%2BqfB7uUwNAkvhp4FcASB64%2B2JUnmIxh3kmkiIPTGc'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/add-review-to-contract',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 13
+    },
+    timestamp: '2023-09-24T06:26:35.680Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /add-review-to-contract',
+  metadata: {
+    meta: {
+      req: {
+        url: '/add-review-to-contract',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          'sec-ch-ua-platform': '"Windows"',
+          accept: '*/*',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          referer: 'http://localhost:9000/admin/dashboard',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3A9aKaNNrMwft4n5NZM1fN196ZfsbLn4iN.8o%2BqfB7uUwNAkvhp4FcASB64%2B2JUnmIxh3kmkiIPTGc'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/add-review-to-contract',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 12
+    },
+    timestamp: '2023-09-24T06:26:57.052Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /add-review-to-contract',
+  metadata: {
+    meta: {
+      req: {
+        url: '/add-review-to-contract',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          'sec-ch-ua-platform': '"Windows"',
+          accept: '*/*',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          referer: 'http://localhost:9000/admin/dashboard',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3Ap_wy3ccQ880I_-ZH-hBrg2H77TVzQf20.BIB6vRYDtKA5dXrp5t9C%2Fv99bc22mLKYD%2F4JDNyvH7U'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/add-review-to-contract',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 13
+    },
+    timestamp: '2023-09-24T06:28:06.289Z'
+  }
+}
+{
+  level: 'warn',
+  message: 'HTTP GET /get-duriandata?farmID=333&treeID=5678&durianID=1234567',
+  metadata: {
+    meta: {
+      req: {
+        url: '/get-duriandata?farmID=333&treeID=5678&durianID=1234567',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'cache-control': 'max-age=0',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'sec-ch-ua-platform': '"Windows"',
+          'upgrade-insecure-requests': '1',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+          'sec-fetch-site': 'none',
+          'sec-fetch-mode': 'navigate',
+          'sec-fetch-user': '?1',
+          'sec-fetch-dest': 'document',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AzoGZY4LAuIgnxQ3xj8qFy2YIEnGteGu3.PnmWcMM6YbjwDc0Kb6zLxzariGoJoUUsVnMgDWOTljI',
+          'if-none-match': 'W/"13ac-mqZrlfkH8Sd4LKufIYSCNZVy1Dc"'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/get-duriandata?farmID=333&treeID=5678&durianID=1234567',
+        query: { farmID: '333', treeID: '5678', durianID: '1234567' }
+      },
+      res: { statusCode: 404 },
+      responseTime: 1012
+    },
+    timestamp: '2023-09-24T06:37:22.044Z'
+  }
+}
+{
+  level: 'warn',
+  message: 'HTTP GET /get-duriandata?farmID=333&treeID=5678&durianID=1234567',
+  metadata: {
+    meta: {
+      req: {
+        url: '/get-duriandata?farmID=333&treeID=5678&durianID=1234567',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          accept: '*/*',
+          'sec-fetch-site': 'none',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3ATr4O9nVDYR-rssEFmDphjWYzCMwPZClh.xelJ9NrDrQwK8G4q9UfVoPpROuM4%2FbG3qNwlTnn5iaU',
+          'if-none-match': 'W/"13ac-mqZrlfkH8Sd4LKufIYSCNZVy1Dc"'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/get-duriandata?farmID=333&treeID=5678&durianID=1234567',
+        query: { farmID: '333', treeID: '5678', durianID: '1234567' }
+      },
+      res: { statusCode: 404 },
+      responseTime: 240
+    },
+    timestamp: '2023-09-24T06:37:22.496Z'
+  }
+}
+{
+  level: 'warn',
+  message: 'HTTP GET /get-duriandata?farmID=123&treeID=5678&durianID=1234567',
+  metadata: {
+    meta: {
+      req: {
+        url: '/get-duriandata?farmID=123&treeID=5678&durianID=1234567',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'sec-ch-ua-platform': '"Windows"',
+          'upgrade-insecure-requests': '1',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+          'sec-fetch-site': 'none',
+          'sec-fetch-mode': 'navigate',
+          'sec-fetch-user': '?1',
+          'sec-fetch-dest': 'document',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3ATr4O9nVDYR-rssEFmDphjWYzCMwPZClh.xelJ9NrDrQwK8G4q9UfVoPpROuM4%2FbG3qNwlTnn5iaU'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/get-duriandata?farmID=123&treeID=5678&durianID=1234567',
+        query: { farmID: '123', treeID: '5678', durianID: '1234567' }
+      },
+      res: { statusCode: 404 },
+      responseTime: 255
+    },
+    timestamp: '2023-09-24T06:37:32.277Z'
+  }
+}
+{
+  level: 'warn',
+  message: 'HTTP GET /get-duriandata?farmID=123&treeID=5678&durianID=1234567',
+  metadata: {
+    meta: {
+      req: {
+        url: '/get-duriandata?farmID=123&treeID=5678&durianID=1234567',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          accept: '*/*',
+          'sec-fetch-site': 'none',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3ATr4O9nVDYR-rssEFmDphjWYzCMwPZClh.xelJ9NrDrQwK8G4q9UfVoPpROuM4%2FbG3qNwlTnn5iaU'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/get-duriandata?farmID=123&treeID=5678&durianID=1234567',
+        query: { farmID: '123', treeID: '5678', durianID: '1234567' }
+      },
+      res: { statusCode: 404 },
+      responseTime: 239
+    },
+    timestamp: '2023-09-24T06:37:32.711Z'
+  }
+}
+{
+  level: 'warn',
+  message: 'HTTP GET /get-duriandata?farmID=000&treeID=1234&durianID=1234567',
+  metadata: {
+    meta: {
+      req: {
+        url: '/get-duriandata?farmID=000&treeID=1234&durianID=1234567',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'cache-control': 'max-age=0',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'sec-ch-ua-platform': '"Windows"',
+          'upgrade-insecure-requests': '1',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+          'sec-fetch-site': 'none',
+          'sec-fetch-mode': 'navigate',
+          'sec-fetch-user': '?1',
+          'sec-fetch-dest': 'document',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3A1bm0Fx2sdA5nfL_POvRpAvkU8EdPmfJN.WjIo1r4ZsZUDoh5%2B6PGhNBfz9FFCC0lkCODEKRlR0DE',
+          'if-none-match': 'W/"13ac-mqZrlfkH8Sd4LKufIYSCNZVy1Dc"'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/get-duriandata?farmID=000&treeID=1234&durianID=1234567',
+        query: { farmID: '000', treeID: '1234', durianID: '1234567' }
+      },
+      res: { statusCode: 404 },
+      responseTime: 997
+    },
+    timestamp: '2023-09-24T06:39:47.514Z'
+  }
+}
+{
+  level: 'warn',
+  message: 'HTTP GET /get-duriandata?farmID=000&treeID=1234&durianID=1234567',
+  metadata: {
+    meta: {
+      req: {
+        url: '/get-duriandata?farmID=000&treeID=1234&durianID=1234567',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          accept: '*/*',
+          'sec-fetch-site': 'none',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AKW-4PZ31vJWh2mmxWXuFz76wb_Yf8CC1.BiXnLtAWG%2FjNYCGZmqV%2BTSd4p85czxgGqUgrKg731EE',
+          'if-none-match': 'W/"13ac-mqZrlfkH8Sd4LKufIYSCNZVy1Dc"'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/get-duriandata?farmID=000&treeID=1234&durianID=1234567',
+        query: { farmID: '000', treeID: '1234', durianID: '1234567' }
+      },
+      res: { statusCode: 404 },
+      responseTime: 239
+    },
+    timestamp: '2023-09-24T06:39:47.950Z'
+  }
+}
+{
+  level: 'warn',
+  message: 'HTTP GET /get-category-reviews?farmID=123&treeID=1234&category=creaminess',
+  metadata: {
+    meta: {
+      req: {
+        url: '/get-category-reviews?farmID=123&treeID=1234&category=creaminess',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          'sec-ch-ua-platform': '"Windows"',
+          accept: '*/*',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          referer: 'http://localhost:9000/durianTree?farmID=123&treeID=1234',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AuE1eEa3VPrPA9XY9IlOR1_Yu1bR2hDgv.BRei1cjxzblU6OjDbBqN0hCUWENCpVQ%2FJUFF5kzyfE4'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/get-category-reviews?farmID=123&treeID=1234&category=creaminess',
+        query: { farmID: '123', treeID: '1234', category: 'creaminess' }
+      },
+      res: { statusCode: 404 },
+      responseTime: 2
+    },
+    timestamp: '2023-09-24T07:55:59.750Z'
+  }
+}
+{
+  level: 'warn',
+  message: 'HTTP GET /get-reviews?farmID=123&treeID=1234',
+  metadata: {
+    meta: {
+      req: {
+        url: '/get-reviews?farmID=123&treeID=1234',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          'sec-ch-ua-platform': '"Windows"',
+          accept: '*/*',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          referer: 'http://localhost:9000/durianTree?farmID=123&treeID=1234',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AwbnZxV9uAexKpSNjdi-OukTy32TrI9L7.Za2FFgoP6SmlBGxbR3RomZLsbD8VXEl%2FekHTvndZ8aU',
+          'if-none-match': 'W/"1c-XCwTNRdRbO356oUrlPR0p6ZTdL4"'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/get-reviews?farmID=123&treeID=1234',
+        query: { farmID: '123', treeID: '1234' }
+      },
+      res: { statusCode: 404 },
+      responseTime: 3
+    },
+    timestamp: '2023-09-24T08:01:53.863Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /get-reviews?farmID=123&treeID=1234',
+  metadata: {
+    meta: {
+      req: {
+        url: '/get-reviews?farmID=123&treeID=1234',
+        headers: {
+          'user-agent': 'PostmanRuntime/7.33.0',
+          accept: '*/*',
+          'postman-token': '4e5a4cd6-51ef-4243-826a-8c948279e0df',
+          host: 'localhost:9000',
+          'accept-encoding': 'gzip, deflate, br',
+          connection: 'keep-alive',
+          cookie: 'connect.sid=s%3ACzWYLMD36m54rs8nZL8zkKksXy1FzjY7.bK3JadBGqRW1HkLHiHobUdPmHMTykHONAVnGtQX5DXE'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/get-reviews?farmID=123&treeID=1234',
+        query: { farmID: '123', treeID: '1234' }
+      },
+      res: { statusCode: 500 },
+      responseTime: 1026
+    },
+    timestamp: '2023-09-24T08:07:12.680Z'
+  }
+}
+{
+  level: 'warn',
+  message: 'HTTP GET /get-all-reviews?farmID=123&treeID=1234',
+  metadata: {
+    meta: {
+      req: {
+        url: '/get-all-reviews?farmID=123&treeID=1234',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          'sec-ch-ua-platform': '"Windows"',
+          accept: '*/*',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          referer: 'http://localhost:9000/durianTree?farmID=123&treeID=1234',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3ALHAf4iTRFZKjaqSvzXj8dTC3k3f8-3bb.tNrQwMFDRo2fpzOLqC1saerRhEjsLD841x3YMcZKPOk'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/get-all-reviews?farmID=123&treeID=1234',
+        query: { farmID: '123', treeID: '1234' }
+      },
+      res: { statusCode: 404 },
+      responseTime: 2
+    },
+    timestamp: '2023-09-24T08:33:43.012Z'
+  }
+}
+{
+  level: 'warn',
+  message: 'HTTP GET /get-all-reviews?farmID=123&treeID=1234',
+  metadata: {
+    meta: {
+      req: {
+        url: '/get-all-reviews?farmID=123&treeID=1234',
+        headers: {
+          host: 'localhost:9000',
+          connection: 'keep-alive',
+          'sec-ch-ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+          'sec-ch-ua-mobile': '?0',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          'sec-ch-ua-platform': '"Windows"',
+          accept: '*/*',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-dest': 'empty',
+          referer: 'http://localhost:9000/durianTree?farmID=123&treeID=1234',
+          'accept-encoding': 'gzip, deflate, br',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3ALHAf4iTRFZKjaqSvzXj8dTC3k3f8-3bb.tNrQwMFDRo2fpzOLqC1saerRhEjsLD841x3YMcZKPOk'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/get-all-reviews?farmID=123&treeID=1234',
+        query: { farmID: '123', treeID: '1234' }
+      },
+      res: { statusCode: 404 },
+      responseTime: 1
+    },
+    timestamp: '2023-09-24T08:36:32.783Z'
+  }
+}

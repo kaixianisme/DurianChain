@@ -51,49 +51,6 @@ router.get('/', (req, res) => {
 	res.redirect('/DurianTypes'); // Assuming 'DurianTypes' is the route for 'DurianTypes.ejs'
 });
 
-
-// API endpoint to receive and store data
-router.post('/receive-data', (req, res) => {
-	const {
-		country,
-		postCode,
-		farmID,
-		treeID,
-		durianType,
-		durianID,
-		harvestTime,
-		scanTime,
-		firstPlant,
-		workerID
-	} = req.body;
-
-	const newDurianData = new DurianData({
-		country,
-		postCode,
-		farmID,
-		treeID,
-		durianType,
-		durianID,
-		harvestTime,
-		scanTime,
-		firstPlant,
-		workerID
-	});
-
-	newDurianData.save()
-		.then(() => {
-            logger.info('Data saved to MongoDB'); // Log success
-			res.status(200).send('Data received and saved successfully');
-		})
-		.catch(err => {
-			logger.error('Error saving data to MongoDB:', err); // Log error
-			res.status(500).send('Error saving data to MongoDB');
-		});
-});
-
-
-
-
 // API endpoint to get all data from the database
 router.get('/get-all-data', (req, res) => {
 	logger.info(`GET request received on /get-all-data from IP: ${req.ip}`);
@@ -239,6 +196,13 @@ router.get('/get-duriandata', async (req, res) => {
 		// Use your contract's ABI to call the getDurianData function
 		const result = await contract.methods.getDurianData(farmID, treeID, durianID).call();
 
+		 // Check if the farmID, treeID, durianID is empty (indicating that the durian does not exist)
+		 if (parseInt(result[2]) == 0 || parseInt(result[3]) == 0 || parseInt(result[5]) == 0) {
+            // Handle the case where the durian is not found
+            res.status(404).send('Durian not found in the smart contract');
+            return;
+        }
+		
 		// Parse the result into a JavaScript object
 		const durianData = {
 			country: result[0],
@@ -318,7 +282,7 @@ router.get('/add-review-to-contract', async (req, res) => {
 
 		// Loop through the approved reviews and add each to the smart contract
 		for (const review of approvedReviews) {
-			const { farmID, treeID, rating, comment } = review;
+			const { farmID, treeID, creaminess, fragment, seedSize, taste, sweetness, bitterness, texture, aroma, comment } = review;
 
 			// Create a transaction object
 			const transactionObject = {
@@ -327,7 +291,7 @@ router.get('/add-review-to-contract', async (req, res) => {
 				gas: 2000000, // Adjust gas limit as needed
 				gasPrice: '10000000000', // Set a high gas price (in wei)
 				data: contract.methods
-					.addReview(farmID, treeID, rating, comment)
+					.addReview(farmID, treeID, creaminess, fragment, seedSize, taste, sweetness, bitterness, texture, aroma, comment)
 					.encodeABI(),
 			};
 
@@ -352,27 +316,37 @@ router.get('/add-review-to-contract', async (req, res) => {
 });
 
 
-// Create a route to get reviews from the smart contract
+// Create a route to get reviews by category from the smart contract
 router.get('/get-reviews', async (req, res) => {
-	try {
-		const farmID = req.query.farmID; // Assuming you pass farmID as a query parameter
-		const treeID = req.query.treeID; // Assuming you pass treeID as a query parameter
+    try {
+        const farmID = req.query.farmID; // Assuming you pass farmID as a query parameter
+        const treeID = req.query.treeID; // Assuming you pass treeID as a query parameter
 
-		// Use your contract's ABI to call the getReviews function
-		const result = await contract.methods.getReviews(farmID, treeID).call();
+        // Use your contract's ABI to call the getReviews function
+        const result = await contract.methods.getReviews(farmID, treeID).call();
+		
+        // Parse the result into an array of review objects filtered by category
+        const reviews = result.map(item => ({
+			creaminess: parseInt(item[0]),
+            fragment: parseInt(item[1]),
+            seedSize: parseInt(item[2]),
+            taste: parseInt(item[3]),
+            sweetness: parseInt(item[4]),
+            bitterness: parseInt(item[5]),
+            texture: parseInt(item[6]),
+            aroma: parseInt(item[7]),
+            comment: item[8],
+        }))
 
-		// Parse the result into an array of review objects
-		const reviews = result.map(item => ({
-			rating: parseInt(item[0]),
-			comment: item[1],
-		}));
 
-		res.status(200).json(reviews);
-	} catch (error) {
-		console.error(error);
-		res.status(500).send('Error retrieving reviews from the smart contract');
-	}
+
+        res.status(200).json(reviews);
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Error retrieving category reviews from the smart contract');
+    }
 });
+
 
 
 // In your Express.js server (router.js or a separate route file)

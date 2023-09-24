@@ -56,7 +56,24 @@
             font-style: italic;
         }
 
-       
+        /* Style for Average Overall Rating */
+        .average-rating {
+            color: #3f51b5;
+            font-weight: bold;
+        }
+
+        /* Style for Overall Rating */
+        .overall-rating {
+            color: #f44336;
+            font-weight: bold;
+        }
+
+        /* Style for Comment */
+        .comment {
+            color: #009688;
+            font-style: italic;
+        }
+
         /* Star rating styles */
         .star-rating {
             font-size: 24px;
@@ -94,374 +111,113 @@
         <!-- Durian details will be displayed here -->
     </div>
 
-
-    <button id="toggleReviewsButton">Toggle Reviews</button>
+    <button id="toggleReviewsButton">Hide Reviews</button>
     <div id="reviews-container"></div>
-
 
     <script src="https://cdn.jsdelivr.net/npm/web3@1.6.1/dist/web3.min.js"></script>
 
     <script>
-        const contractAddress = "0x45a131181a22fE3aD58A1b878262239e99805afD";
-  const contractABI = [
-      {
-        "inputs": [
-          {
-            "internalType": "string",
-            "name": "_country",
-            "type": "string"
-          },
-          {
-            "internalType": "uint32",
-            "name": "_postCode",
-            "type": "uint32"
-          },
-          {
-            "internalType": "uint16",
-            "name": "_farmID",
-            "type": "uint16"
-          },
-          {
-            "internalType": "uint32",
-            "name": "_treeID",
-            "type": "uint32"
-          },
-          {
-            "internalType": "uint8",
-            "name": "_durianType",
-            "type": "uint8"
-          },
-          {
-            "internalType": "uint32",
-            "name": "_durianID",
-            "type": "uint32"
-          },
-          {
-            "internalType": "string",
-            "name": "_harvestTime",
-            "type": "string"
-          },
-          {
-            "internalType": "string",
-            "name": "_scanTime",
-            "type": "string"
-          },
-          {
-            "internalType": "string",
-            "name": "_firstPlant",
-            "type": "string"
-          },
-          {
-            "internalType": "uint16",
-            "name": "_workerID",
-            "type": "uint16"
-          }
-        ],
-        "name": "addDurian",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "uint16",
-            "name": "_farmID",
-            "type": "uint16"
-          },
-          {
-            "internalType": "uint32",
-            "name": "_treeID",
-            "type": "uint32"
-          },
-          {
-            "internalType": "uint8",
-            "name": "_rating",
-            "type": "uint8"
-          },
-          {
-            "internalType": "string",
-            "name": "_comment",
-            "type": "string"
-          }
-        ],
-        "name": "addReview",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "uint16",
-            "name": "_farmID",
-            "type": "uint16"
-          },
-          {
-            "internalType": "uint32",
-            "name": "_treeID",
-            "type": "uint32"
-          },
-          {
-            "internalType": "uint32",
-            "name": "_durianID",
-            "type": "uint32"
-          }
-        ],
-        "name": "getDurianData",
-        "outputs": [
-          {
-            "components": [
-              {
-                "internalType": "string",
-                "name": "country",
-                "type": "string"
-              },
-              {
-                "internalType": "uint32",
-                "name": "postCode",
-                "type": "uint32"
-              },
-              {
-                "internalType": "uint16",
-                "name": "farmID",
-                "type": "uint16"
-              },
-              {
-                "internalType": "uint32",
-                "name": "treeID",
-                "type": "uint32"
-              },
-              {
-                "internalType": "uint8",
-                "name": "durianType",
-                "type": "uint8"
-              },
-              {
-                "internalType": "uint32",
-                "name": "durianID",
-                "type": "uint32"
-              },
-              {
-                "internalType": "string",
-                "name": "harvestTime",
-                "type": "string"
-              },
-              {
-                "internalType": "string",
-                "name": "scanTime",
-                "type": "string"
-              },
-              {
-                "internalType": "string",
-                "name": "firstPlant",
-                "type": "string"
-              },
-              {
-                "internalType": "uint16",
-                "name": "workerID",
-                "type": "uint16"
-              }
-            ],
-            "internalType": "struct DurianContract.Durian",
-            "name": "",
-            "type": "tuple"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "uint16",
-            "name": "_farmID",
-            "type": "uint16"
-          },
-          {
-            "internalType": "uint32",
-            "name": "_treeID",
-            "type": "uint32"
-          }
-        ],
-        "name": "getDurianIDs",
-        "outputs": [
-          {
-            "internalType": "uint32[]",
-            "name": "",
-            "type": "uint32[]"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [],
-        "name": "getFarmIDs",
-        "outputs": [
-          {
-            "internalType": "uint16[]",
-            "name": "",
-            "type": "uint16[]"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "uint16",
-            "name": "_farmID",
-            "type": "uint16"
-          },
-          {
-            "internalType": "uint32",
-            "name": "_treeID",
-            "type": "uint32"
-          }
-        ],
-        "name": "getReviews",
-        "outputs": [
-          {
-            "components": [
-              {
-                "internalType": "uint8",
-                "name": "rating",
-                "type": "uint8"
-              },
-              {
-                "internalType": "string",
-                "name": "comment",
-                "type": "string"
-              }
-            ],
-            "internalType": "struct DurianContract.Review[]",
-            "name": "",
-            "type": "tuple[]"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "uint16",
-            "name": "_farmID",
-            "type": "uint16"
-          }
-        ],
-        "name": "getTreeIDs",
-        "outputs": [
-          {
-            "internalType": "uint32[]",
-            "name": "",
-            "type": "uint32[]"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      }
-    ];
-
-  const web3 = new Web3("https://sepolia.infura.io/v3/2db8bf25ea424b7898c746d2bd37470a");
-  const contract = new web3.eth.Contract(contractABI, contractAddress);
-
-
         // Assuming you have farmID and treeID as JavaScript variables
         const farmID = ("<%= farmID %>");
         const treeID = ("<%= treeID %>");
       
-// Function to retrieve durianIDs using getDurianIDs function
-async function getDurianCount() {
-  try {
-    // Call the getDurianIDs function from your smart contract
-    const durianIDs = await contract.methods.getDurianIDs(farmID, treeID).call();
-
-    // Get the total count of durians produced by the tree
-    const durianCount = durianIDs.length;
-
-    // Display the total count in the HTML
-    const durianCountContainer = document.getElementById("durianCountContainer");
-    durianCountContainer.innerHTML = `Total Durians Produced from T${treeID}: ${durianCount}`;
-  } catch (error) {
-    console.error(error);
-  }
-}
-
-// Call the getDurianCount function when the page loads
-window.addEventListener("load", getDurianCount);
-
-
-
-        // Function to fetch and display reviews
-        async function fetchAndDisplayReviews() {
-            const farmID = ("<%= farmID %>"); // Get farmID from the template
-            const treeID = ("<%= treeID %>"); // Get treeID from the template
+        // Function to fetch and display reviews with an overall rating
+        async function fetchAndDisplayReviewsWithOverallRating() {
+            const farmID = "<%= farmID %>"; // Get farmID from the template
+            const treeID = "<%= treeID %>"; // Get treeID from the template
 
             try {
+                // Send a request to your server to fetch all reviews for the tree
                 const response = await fetch(`/get-reviews?farmID=${farmID}&treeID=${treeID}`);
                 const reviews = await response.json();
 
-                // Display the reviews on the page
-                const reviewsContainer = document.getElementById('reviews-container');
-                reviewsContainer.innerHTML = ''; // Clear previous content
+                // Calculate the average overall rating
+                const numReviews = reviews.length;
+                let totalOverallRating = 0;
+
+                reviews.forEach((review) => {
+                    // Calculate the sum of individual ratings
+                    const sumIndividualRatings =
+                        review.creaminess +
+                        review.fragment +
+                        review.seedSize +
+                        review.taste +
+                        review.sweetness +
+                        review.bitterness +
+                        review.texture +
+                        review.aroma;
+
+                    // Calculate the average overall rating
+                    const overallRating = sumIndividualRatings / 8;
+                    totalOverallRating += overallRating;
+                });
+
+                const averageOverallRating = totalOverallRating / numReviews;
+
+                // Display the average overall rating on the page with emphasis color
+                const reviewsContainer = document.getElementById("reviews-container");
+                reviewsContainer.innerHTML = `<p class="average-rating">Average Overall Rating: ${averageOverallRating.toFixed(2)}</p>`;
 
                 if (reviews.length === 0) {
-                    reviewsContainer.innerHTML = '<p>No reviews available.</p>';
+                    reviewsContainer.innerHTML += '<p>No reviews available.</p>';
                 } else {
-                    reviews.forEach(review => {
-                        const reviewElement = document.createElement('div');
-                        reviewElement.classList.add('review');
+                    reviews.forEach((review, index) => {
+                        const reviewElement = document.createElement("div");
+                        reviewElement.classList.add("review");
 
-                        // Create star rating based on the review's rating value
-                        const ratingElement = document.createElement('div');
-                        ratingElement.classList.add('star-rating');
-                        const ratingStars = document.createElement('span');
-                        ratingStars.innerHTML = '&#9733;'.repeat(review.rating); // Display gold stars based on rating
-                        ratingElement.appendChild(ratingStars);
+                        // Create a heading with the review number
+                        const reviewHeading = document.createElement("h2");
+                        reviewHeading.textContent = `Review #${index + 1}`;
 
-                        const commentElement = document.createElement('p');
-                        commentElement.textContent = `Comment: ${review.comment}`;
+                        // Display review details
+                        const reviewDetails = document.createElement("div");
+                        reviewDetails.innerHTML = `
+                            <p class="overall-rating">Overall Rating: ${((review.creaminess + review.fragment + review.seedSize + review.taste + review.sweetness + review.bitterness + review.texture + review.aroma) / 8).toFixed(2)}</p>
+                            <p>Creaminess: ${review.creaminess}</p>
+                            <p>Fragment: ${review.fragment}</p>
+                            <p>Seed Size: ${review.seedSize}</p>
+                            <p>Taste: ${review.taste}</p>
+                            <p>Sweetness: ${review.sweetness}</p>
+                            <p>Bitterness: ${review.bitterness}</p>
+                            <p>Texture: ${review.texture}</p>
+                            <p>Aroma: ${review.aroma}</p>
+                            <p class="comment">Comment: ${review.comment}</p>
+                        `;
 
-                        reviewElement.appendChild(ratingElement);
-                        reviewElement.appendChild(commentElement);
+                        reviewElement.appendChild(reviewHeading);
+                        reviewElement.appendChild(reviewDetails);
 
                         reviewsContainer.appendChild(reviewElement);
-
-                        
                     });
                 }
             } catch (error) {
                 console.error(error);
                 // Handle error
             }
-
-            const toggleReviewsButton = document.getElementById('toggleReviewsButton');
-    const reviewsContainer = document.getElementById('reviews-container');
-
-    // Initially hide the reviews
-    let reviewsVisible = false;
-    reviewsContainer.style.display = 'none';
-
-    toggleReviewsButton.addEventListener('click', () => {
-        if (reviewsVisible) {
-            // If reviews are visible, hide them
-            reviewsContainer.style.display = 'none';
-            toggleReviewsButton.textContent = 'Show Reviews';
-        } else {
-            // If reviews are hidden, display them
-            reviewsContainer.style.display = 'block';
-            toggleReviewsButton.textContent = 'Hide Reviews';
-        }
-        reviewsVisible = !reviewsVisible; // Toggle the visibility state
-    });
         }
 
-        // Call the fetchAndDisplayReviews function when the page loads
-        fetchAndDisplayReviews();
-      </script>
-      
+        // Toggle the visibility of reviews when the button is clicked
+        function toggleReviews() {
+            const reviewsContainer = document.getElementById("reviews-container");
+            const toggleButton = document.getElementById("toggleReviewsButton");
+
+            if (reviewsContainer.style.display === "none") {
+                // Reviews are currently hidden, so show them
+                reviewsContainer.style.display = "block";
+                toggleButton.textContent = "Hide Reviews";
+            } else {
+                // Reviews are currently visible, so hide them
+                reviewsContainer.style.display = "none";
+                toggleButton.textContent = "Show Reviews";
+            }
+        }
+
+        // Attach the toggleReviews function to the button click event
+        const toggleButton = document.getElementById("toggleReviewsButton");
+        toggleButton.addEventListener("click", toggleReviews);
+
+        // Call the fetchAndDisplayReviewsWithOverallRating function when the page loads
+        window.addEventListener("load", fetchAndDisplayReviewsWithOverallRating);
+    </script>
 </body>
 </html>

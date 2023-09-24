@@ -54,7 +54,14 @@ router.post('/approve-review/:reviewId', isAdminAuthenticated, async (req, res) 
 		const approvedReview = new ApprovedReview({
 			farmID: review.farmID,
 			treeID: review.treeID,
-			rating: review.rating,
+			creaminess: review.creaminess,
+			fragment: review.fragment,
+			seedSize: review.seedSize,
+			taste: review.taste,
+			sweetness: review.sweetness,
+			bitterness: review.bitterness,
+			texture: review.texture,
+			aroma: review.aroma,
 			comment: review.comment,
 			// Copy any other fields you need from the original review
 		});

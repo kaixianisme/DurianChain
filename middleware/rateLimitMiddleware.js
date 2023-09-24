@@ -9,7 +9,7 @@ const adminLoginLimiter = rateLimit({
 
 const reqLimitter = rateLimit({
   windowMs: 60 * 1000, // 1 minute window
-  max: 20, // 5 requests per windowMs
+  max: 30, // 30 requests per windowMs
   message: 'Too many request!',
 });
 

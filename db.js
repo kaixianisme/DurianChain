@@ -71,10 +71,50 @@ const reviewSchema = new mongoose.Schema({
 
 // Define a schema and model for approved reviews (if not already defined)
 const approvedReviewSchema = new mongoose.Schema({
-	farmID: Number,
-	treeID: Number,
-	rating: Number,
-	comment: String,
+	farmID: {
+		type: Number,
+		required: true,
+	},
+	treeID: {
+		type: Number,
+		required: true,
+	},
+	creaminess: {
+		type: Number,
+		required: true,
+	},
+	fragment: {
+		type: Number,
+		required: true,
+	},
+	seedSize: {
+		type: Number,
+		required: true,
+	},
+	taste: {
+		type: Number,
+		required: true,
+	},
+	sweetness: {
+		type: Number,
+		required: true,
+	},
+	bitterness: {
+		type: Number,
+		required: true,
+	},
+	texture: {
+		type: Number,
+		required: true,
+	},
+	aroma: {
+		type: Number,
+		required: true,
+	},
+	comment: {
+		type: String,
+		required: true,
+	},
 });
 
 // Create and export models based on the schemas
