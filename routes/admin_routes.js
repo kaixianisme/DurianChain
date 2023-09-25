@@ -1,8 +1,14 @@
-const express = require('express');
+const jwt = require("jsonwebtoken");
+const express = require("express");
+const bcrypt = require("bcrypt");
 const router = express.Router();
+const config = require('../config');
+
 
 const { adminLoginLimiter } = require('../middleware/rateLimitMiddleware');
-const { isAdminAuthenticated } = require('../middleware/adminAuthMiddleware');
+const {cookieJwtAuth} = require('../middleware/adminAuthMiddleware');
+const { admin } = require('../middleware/roles');
+
 
 const { DurianData, Review, ApprovedReview } = require('../db');
 
@@ -11,22 +17,30 @@ router.get('/', (req, res) => {
 	res.render('admin', { errorMessage: req.session.errorMessage });
 });
 
-router.post('/login', adminLoginLimiter, (req, res) => {
-	const username = req.body.username;
-	const password = req.body.password;
+router.post('/login', adminLoginLimiter, async (req, res) => {
+	const adminCredential = [{ username: "admin", password: "$2b$15$mwHrBrFfIZCipxeSh9lQPevJ4jzty9GAfJGA0D/Uv/qsKyn8t3uyu", roles: ["admin"] }];
+	let user = adminCredential.find(u => u.username === req.body.username);
+	const valid = await bcrypt.compare(req.body.password, user.password);
 
-	if (username === 'admin' && password === '123') {
-		req.session.isAdmin = true;
-		res.redirect('/admin/dashboard'); // Redirect to the admin dashboard
-	} else {
-		req.session.isAdmin = false; // Set isAdmin to false for non-admin users (optional)
+
+	if (adminCredential.find(u => u.username === req.body.username) && valid == true) {
+		const token = jwt.sign({id: user._id, roles: user.roles,}, `${config.AccessToken}`, { expiresIn: "15m" });
+		console.log(config.AccessToken);
+		res.cookie("token", token, {
+			httpOnly: true
+		})
+
+		res.redirect('/admin/dashboard')
+
+	}
+	else {
 		req.session.errorMessage = 'Invalid username or password';
-		res.redirect('/admin'); // Redirect back to the login page with an error message
+		res.redirect('/admin');
 	}
 });
 
 // Route to get all reviews from the database and render admin_dashboard.ejs
-router.get('/dashboard', isAdminAuthenticated, async (req, res) => {
+router.get('/dashboard', authenticateJWT, async (req, res) => {
 	try {
 		const reviews = await Review.find({}); // Fetch all reviews from MongoDB
 
@@ -39,7 +53,7 @@ router.get('/dashboard', isAdminAuthenticated, async (req, res) => {
 });
 
 // Route to handle approval and store approved reviews
-router.post('/approve-review/:reviewId', isAdminAuthenticated, async (req, res) => {
+router.post('/approve-review/:reviewId', async (req, res) => {
 	try {
 		const reviewId = req.params.reviewId;
 
@@ -81,7 +95,7 @@ router.post('/approve-review/:reviewId', isAdminAuthenticated, async (req, res) 
 });
 
 // Endpoint to get the total count of approved reviews
-router.get('/approved-review-count', isAdminAuthenticated, async (req, res) => {
+router.get('/approved-review-count', async (req, res) => {
 	try {
 		// Count the approved reviews in the database
 		const approvedReviewCount = await ApprovedReview.countDocuments();
@@ -93,8 +107,22 @@ router.get('/approved-review-count', isAdminAuthenticated, async (req, res) => {
 });
 
 router.get('/logout', (req, res) => {
-	req.session.isAdmin = false;
+	res.clearCookie('token');
 	res.redirect('/admin'); // Redirect to the login page after logout
 });
+
+// Middleware to verify JWT
+function authenticateJWT(req, res, next) {
+    // Check if a token is in cookies
+    const token = req.cookies.token;
+  
+    if (!token) return res.status(401).render('error', { message: 'Unauthorized' });
+  
+    jwt.verify(token, `${config.AccessToken}`, (err, user) => {
+      if (err) return res.status(403).render('error', { message: 'Forbidden' });
+      req.user = user;
+      next();
+    });
+  }
 
 module.exports = router;

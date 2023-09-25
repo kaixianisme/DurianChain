@@ -5,6 +5,10 @@ const app = express();
 const port = config.PORT; // Set your desired port
 const helmet = require('helmet');
 const { reqLimitter } = require('./middleware/rateLimitMiddleware');
+const cookieParser = require('cookie-parser');
+
+app.use(express.json());
+app.use(cookieParser());
 
 require('winston-mongodb')
 
