@@ -15,6 +15,8 @@ router.post('/', (req, res) => {
 		durianType,
 		durianID,
 		harvestTime,
+		scanTime,
+		firstPlant,
 		workerID
 	} = req.body;
 
@@ -26,6 +28,8 @@ router.post('/', (req, res) => {
 		durianType,
 		durianID,
 		harvestTime,
+		scanTime,
+		firstPlant,
 		workerID
 	});
 

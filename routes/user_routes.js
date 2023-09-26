@@ -6,9 +6,6 @@ const expressWinston = require('express-winston');
 const {transports, format } = require('winston');
 const schedule = require('node-schedule');
 
-// Store the reference to the job
-let cronJob;
-
 const logger = require('../logger')
 
 router.use(expressWinston.logger({
@@ -65,7 +62,7 @@ router.get('/get-all-data', (req, res) => {
 });
 
 
-// #TODO Try to only let authorized user access such as localhost
+// #TODO authorized user access such as localhost
 // Endpoint to transfer data from MongoDB to Ethereum smart contract
 router.get('/transfer-data', async (req, res) => {
 	try {

@@ -87,6 +87,9 @@ button#submitApprovedReviews:hover {
     </style>
 </head>
 <body>
+    <!-- Add this button where you want the logout button to appear -->
+<button id="logoutButton">Logout</button>
+
     <!-- EJS Template (admin_dashboard.ejs) -->
 <h2>Reviews</h2>
 <label>
@@ -186,6 +189,29 @@ approveButtons.forEach(button => {
 
     // Add click event listener to the submit button
     document.getElementById('submitApprovedReviews').addEventListener('click', submitApprovedReviews);
+
+    // JavaScript code to handle logout
+document.getElementById('logoutButton').addEventListener('click', async () => {
+    try {
+        // Send a GET request to the /logout route
+        const response = await fetch('/admin/logout', {
+            method: 'GET',
+        });
+
+        if (response.status === 200) {
+            // Logout successful, redirect to a login page or perform other actions as needed
+            window.location.href = '/admin'; // Redirect to the login page
+        } else {
+            // Handle logout failure
+            alert('Logout failed. Please try again.');
+        }
+    } catch (error) {
+        console.error(error);
+        alert('An error occurred during logout. Please try again later.');
+    }
+});
+
+
 </script>
 
 </body>

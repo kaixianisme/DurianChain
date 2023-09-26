@@ -29,6 +29,9 @@ app.use(bodyParser.json());
 
 const adminRoutes = require('./routes/admin_routes');
 // Use the user routes
+
+//Optional for more secure option
+// app.use('/admin', allowLocalhostOnly, adminRoutes);
 app.use('/admin', adminRoutes);
 
 const dataRoutes = require('./routes/data_routes');
@@ -42,6 +45,19 @@ app.use('/', reqLimitter, userRoutes);
 app.get("*", (req, res) => {
 	res.status(404).render('404.ejs');
 })
+
+// Middleware to restrict access to localhost
+function allowLocalhostOnly(req, res, next) {
+    const clientIp = req.connection.remoteAddress;
+    if (clientIp === '::1' || clientIp === '127.0.0.1') {
+      // Allow requests from localhost
+      next();
+    } else {
+      // Deny access for other IP addresses
+      res.status(403).send('Access denied. This route is only accessible from localhost.');
+    }
+  }
+  
 
 // Handle uncaught exceptions
 process.on('uncaughtException', (error) => {
