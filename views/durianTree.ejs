@@ -218,6 +218,363 @@
 
         // Call the fetchAndDisplayReviewsWithOverallRating function when the page loads
         window.addEventListener("load", fetchAndDisplayReviewsWithOverallRating);
+
+
+  const contractAddress = '0xd38EF75EB1b06Bb9749557428aBD61E471Bd6E35';
+    const contractABI = [
+      {
+        "inputs": [
+          {
+            "internalType": "string",
+            "name": "_country",
+            "type": "string"
+          },
+          {
+            "internalType": "uint32",
+            "name": "_postCode",
+            "type": "uint32"
+          },
+          {
+            "internalType": "uint16",
+            "name": "_farmID",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint32",
+            "name": "_treeID",
+            "type": "uint32"
+          },
+          {
+            "internalType": "uint8",
+            "name": "_durianType",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint32",
+            "name": "_durianID",
+            "type": "uint32"
+          },
+          {
+            "internalType": "string",
+            "name": "_harvestTime",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_scanTime",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_firstPlant",
+            "type": "string"
+          },
+          {
+            "internalType": "uint16",
+            "name": "_workerID",
+            "type": "uint16"
+          }
+        ],
+        "name": "addDurian",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint16",
+            "name": "_farmID",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint32",
+            "name": "_treeID",
+            "type": "uint32"
+          },
+          {
+            "internalType": "uint8",
+            "name": "_creaminess",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "_fragment",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "_seedSize",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "_taste",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "_sweetness",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "_bitterness",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "_texture",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "_aroma",
+            "type": "uint8"
+          },
+          {
+            "internalType": "string",
+            "name": "_comment",
+            "type": "string"
+          }
+        ],
+        "name": "addReview",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint16",
+            "name": "_farmID",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint32",
+            "name": "_treeID",
+            "type": "uint32"
+          },
+          {
+            "internalType": "uint32",
+            "name": "_durianID",
+            "type": "uint32"
+          }
+        ],
+        "name": "getDurianData",
+        "outputs": [
+          {
+            "components": [
+              {
+                "internalType": "string",
+                "name": "country",
+                "type": "string"
+              },
+              {
+                "internalType": "uint32",
+                "name": "postCode",
+                "type": "uint32"
+              },
+              {
+                "internalType": "uint16",
+                "name": "farmID",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint32",
+                "name": "treeID",
+                "type": "uint32"
+              },
+              {
+                "internalType": "uint8",
+                "name": "durianType",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint32",
+                "name": "durianID",
+                "type": "uint32"
+              },
+              {
+                "internalType": "string",
+                "name": "harvestTime",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "scanTime",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "firstPlant",
+                "type": "string"
+              },
+              {
+                "internalType": "uint16",
+                "name": "workerID",
+                "type": "uint16"
+              }
+            ],
+            "internalType": "struct DurianContract.Durian",
+            "name": "",
+            "type": "tuple"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint16",
+            "name": "_farmID",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint32",
+            "name": "_treeID",
+            "type": "uint32"
+          }
+        ],
+        "name": "getDurianIDs",
+        "outputs": [
+          {
+            "internalType": "uint32[]",
+            "name": "",
+            "type": "uint32[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "getFarmIDs",
+        "outputs": [
+          {
+            "internalType": "uint16[]",
+            "name": "",
+            "type": "uint16[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint16",
+            "name": "_farmID",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint32",
+            "name": "_treeID",
+            "type": "uint32"
+          }
+        ],
+        "name": "getReviews",
+        "outputs": [
+          {
+            "components": [
+              {
+                "internalType": "uint8",
+                "name": "creaminess",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "fragment",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "seedSize",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "taste",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "sweetness",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "bitterness",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "texture",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "aroma",
+                "type": "uint8"
+              },
+              {
+                "internalType": "string",
+                "name": "comment",
+                "type": "string"
+              }
+            ],
+            "internalType": "struct DurianContract.Review[]",
+            "name": "",
+            "type": "tuple[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint16",
+            "name": "_farmID",
+            "type": "uint16"
+          }
+        ],
+        "name": "getTreeIDs",
+        "outputs": [
+          {
+            "internalType": "uint32[]",
+            "name": "",
+            "type": "uint32[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      }
+    ];
+
+    const web3 = new Web3("https://sepolia.infura.io/v3/2db8bf25ea424b7898c746d2bd37470a");
+  const contract = new web3.eth.Contract(contractABI, contractAddress);
+  
+        // Function to retrieve durianIDs using getDurianIDs function
+async function getDurianCount() {
+  try {
+    // Call the getDurianIDs function from your smart contract
+    const durianIDs = await contract.methods.getDurianIDs(farmID, treeID).call();
+
+    // Get the total count of durians produced by the tree
+    const durianCount = durianIDs.length;
+
+    // Display the total count in the HTML
+    const durianCountContainer = document.getElementById("durianCountContainer");
+    durianCountContainer.innerHTML = `Total Durians Produced from T${treeID}: ${durianCount}`;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+// Call the getDurianCount function when the page loads
+window.addEventListener("load", getDurianCount);
     </script>
 </body>
 </html>

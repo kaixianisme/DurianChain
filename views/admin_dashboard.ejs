@@ -5,116 +5,186 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /* CSS for admin_dashboard.ejs */
+            /* Reset some default styles */
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 0;
-}
+        /* Body styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
 
-h2 {
-    text-align: center;
-    color: #007bff;
-}
+        /* Container styles */
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+        /* Header styles */
+        h2 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
 
-label {
-    display: inline-block;
-    margin-right: 10px;
-    font-weight: bold;
-}
+        /* Form styles */
+        label {
+            display: inline-block;
+            margin-right: 10px;
+            font-weight: bold;
+        }
 
-#reviewsList {
-    list-style-type: none;
-    padding: 0;
-}
+        /* Review list styles */
+        #reviewsList {
+            list-style-type: none;
+            padding: 0;
+        }
 
-#reviewsList li {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px 0;
-    background-color: #f9f9f9;
-}
+        #reviewsList li {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #f9f9f9;
+        }
 
-strong {
-    font-weight: bold;
-    color: #333;
-}
+        /* Strong styles */
+        strong {
+            font-weight: bold;
+            color: #333;
+        }
 
-button.approveButton {
-    background-color: #007bff;
-    color: #fff;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+        /* Button styles */
+        .approveButton {
+            background-color: #007bff;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-button.approveButton:hover {
-    background-color: #0056b3;
-}
+        .approveButton:hover {
+            background-color: #0056b3;
+        }
 
-#approvedReviewCount {
-    font-weight: bold;
-    color: #007bff;
-    margin-right: 5px;
-}
+        #approvedReviewCount {
+            font-weight: bold;
+            color: #007bff;
+            margin-right: 5px;
+        }
 
-button#submitApprovedReviews {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+        #submitApprovedReviews {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-button#submitApprovedReviews:hover {
-    background-color: #0056b3;
-}
+        #submitApprovedReviews:hover {
+            background-color: #0056b3;
+        }
 
+        /* Logout button styles */
+        #logoutButton {
+            background-color: #dc3545;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            float: right;
+        }
+
+        #logoutButton:hover {
+            background-color: #c82333;
+        }
+
+        /* Job button styles */
+        #startJobButton, #cancelJobButton {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        #startJobButton:hover, #cancelJobButton:hover {
+            background-color: #218838;
+        }
+
+        /* Next job time styles */
+        #nextJobTime {
+            font-weight: bold;
+            color: #007bff;
+            margin-top: 20px;
+        }
+
+        #nextJobTimeValue {
+            font-weight: normal;
+            color: #333;
+        }
+
+        /* Job status styles */
+        #jobStatus {
+            font-weight: bold;
+            color: #333;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
-    <!-- Add this button where you want the logout button to appear -->
-<button id="logoutButton">Logout</button>
+    <!-- Logout button -->
+    <button id="logoutButton">Logout</button>
 
-    <!-- EJS Template (admin_dashboard.ejs) -->
-<h2>Reviews</h2>
-<label>
-    <input type="checkbox" id="alertCheckbox"> Show Alert Message
-</label>
-<ul id="reviewsList">
-    <% if (reviews && reviews.length > 0) { %>
-        <% reviews.forEach(review => { %>
-            <li>
-                <strong>Farm ID:</strong> <%= review.farmID %><br>
-                <strong>Tree ID:</strong> <%= review.treeID %><br>
-                <strong>Rating:</strong> <%= review.rating %><br>
-                <strong>Comment:</strong> <%= review.comment %><br>
-                <button class="approveButton" data-review-id="<%= review._id %>">Approve</button>
-            </li>
-        <% }); %>
-    <% } else { %>
-        <li>No reviews available.</li>
-    <% } %>
-</ul>
+    <!-- Start and Cancel Job buttons -->
+    <button id="startJobButton" onclick="window.location.reload()">Start Job</button>
+    <button id="cancelJobButton" onclick="window.location.reload()">Cancel Job</button>
 
-<div>
-    <p>Total Approved Reviews: <span id="approvedReviewCount">Loading...</span></p>
-    <button id="submitApprovedReviews">Submit Approved Reviews to Smart Contract</button>
-</div>
+    <!-- Next Job Time and Job Status -->
+    <p id="nextJobTime">Next Job Time: <span id="nextJobTimeValue">Calculating...</span></p>
+    <p id="jobStatus"></p>
+
+    <!-- Review section -->
+    <div class="container">
+        <h2>Reviews</h2>
+        <label>
+            <input type="checkbox" id="alertCheckbox"> Show Alert Message
+        </label>
+        <ul id="reviewsList">
+            <% if (reviews && reviews.length > 0) { %>
+                <% reviews.forEach(review => { %>
+                    <li>
+                        <strong>Farm ID:</strong> <%= review.farmID %><br>
+                        <strong>Tree ID:</strong> <%= review.treeID %><br>
+                        <strong>Rating:</strong> <%= review.rating %><br>
+                        <strong>Comment:</strong> <%= review.comment %><br>
+                        <button class="approveButton" data-review-id="<%= review._id %>">Approve</button>
+                    </li>
+                <% }); %>
+            <% } else { %>
+                <li>No reviews available.</li>
+            <% } %>
+        </ul>
+
+        <!-- Total Approved Reviews and Submit button -->
+        <div>
+            <p>Total Approved Reviews: <span id="approvedReviewCount">Loading...</span></p>
+            <button id="submitApprovedReviews">Submit Approved Reviews to Smart Contract</button>
+        </div>
+    </div>
 
 
 <script>
@@ -210,6 +280,104 @@ document.getElementById('logoutButton').addEventListener('click', async () => {
         alert('An error occurred during logout. Please try again later.');
     }
 });
+
+// JavaScript code to handle the "Start Job" and "Cancel Job" buttons
+const startJobButton = document.getElementById('startJobButton');
+const cancelJobButton = document.getElementById('cancelJobButton');
+const nextJobTime = document.getElementById('nextJobTime');
+const nextJobTimeValue = document.getElementById('nextJobTimeValue');
+
+// Function to start the job
+async function startJob() {
+    try {
+        const response = await fetch('/admin/start-job', {
+            method: 'GET',
+        });
+
+        if (response.status === 200) {
+            // Job started successfully
+            startJobButton.disabled = true;
+            cancelJobButton.disabled = false;
+            nextJobTime.style.display = 'block';
+            nextJobTimeValue.textContent = 'Calculating...'; // Display a loading message
+
+            // Fetch the next job time and update the UI
+            const nextJobResponse = await fetch('/admin/next-job-time', {
+                method: 'GET',
+            });
+
+            if (nextJobResponse.status === 200) {
+                const nextJobTimeData = await nextJobResponse.json();
+                nextJobTimeValue.textContent = nextJobTimeData.nextJobTime;
+            } else {
+                nextJobTimeValue.textContent = 'Error fetching next job time';
+            }
+        } else {
+            alert('Failed to start the job. Probably a job is running');
+        }
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+// Function to cancel the job
+async function cancelJob() {
+    try {
+        const response = await fetch('/admin/cancel-job', {
+            method: 'GET',
+        });
+
+        if (response.status === 200) {
+            // Job canceled successfully
+            startJobButton.disabled = false;
+            cancelJobButton.disabled = true;
+            nextJobTime.style.display = 'none'; // Hide the next job time
+        } else {
+            alert('Failed to cancel the job. Probably there are no job running.');
+        }
+    } catch (error) {
+        console.error(error);
+        alert('An error occurred while canceling the job. Please try again later.');
+    }
+}
+
+// Add click event listeners to the "Start Job" and "Cancel Job" buttons
+startJobButton.addEventListener('click', startJob);
+cancelJobButton.addEventListener('click', cancelJob);
+
+async function checkJobStatus() {
+        try {
+            const response = await fetch('/admin/job-status');
+            if (response.status === 200) {
+                const data = await response.json();
+                const jobStatusElement = document.getElementById('jobStatus');
+                const nextJobTimeElement = document.getElementById('nextJobTime');
+
+                jobStatusElement.textContent = `Job Status: ${data.jobStatus}`;
+                nextJobTimeElement.textContent = `Next Job Time: ${data.nextJobTime}`;
+
+                // Enable or disable the "Start Job" and "Cancel Job" buttons based on the job status
+                const startJobButton = document.getElementById('startJobButton');
+                const cancelJobButton = document.getElementById('cancelJobButton');
+
+                if (data.jobStatus === 'running') {
+                    startJobButton.disabled = true;
+                    cancelJobButton.disabled = false;
+                } else {
+                    startJobButton.disabled = false;
+                    cancelJobButton.disabled = true;
+                }
+            }
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+    // Call the function to check for running cron job on page load
+checkJobStatus();
+
+
+
 
 
 </script>

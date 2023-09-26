@@ -7,6 +7,9 @@ const { web3,contractAddress, abi, contract, privateKey, account, gasPrice} = re
 const schedule = require('node-schedule');
 
 let cronJob;
+// Define a variable to store the current job status and time
+let jobStatus = 'idle'; // 'idle', 'running', or 'canceled'
+let nextJobTime = 'Not scheduled';
 
 
 const { adminLoginLimiter } = require('../middleware/rateLimitMiddleware');
@@ -110,15 +113,18 @@ router.get('/approved-review-count', async (req, res) => {
 	}
 });
 
-// Define a function to cancel the cron job
+// Function to cancel the cron job
 function cancelJob() {
-	if (cronJob) {
-	  cronJob.cancel();
-	  console.log('Cron job canceled');
-	} else {
-	  console.log('No cron job running to cancel');
-	}
-  }
+    if (cronJob) {
+        cronJob.cancel();
+        cronJob = null; // Reset cronJob
+        jobStatus = 'canceled'; // Update job status
+        nextJobTime = 'Not scheduled'; // Reset nextJobTime
+        console.log('Cron job canceled');
+    } else {
+        console.log('No cron job running to cancel');
+    }
+}
 
   // Define the route to cancel the cron job
 router.get('/cancel-job', (req, res) => {
@@ -129,8 +135,13 @@ router.get('/cancel-job', (req, res) => {
 // Define the route to start the cron job
 router.get('/start-job', (req, res) => {
 	// Schedule the cron job
-	console.log('Starting cron job...')
-	cronJob = schedule.scheduleJob('* * */3 * * *', async () => {
+
+	if (cronJob) {
+        res.status(400).send('Cron job is already running');
+	}
+	else {
+		console.log('Starting cron job...');
+		cronJob = schedule.scheduleJob('0 0 */3 ? * *', async () => {
 	  try {
 		const dataFromMongoDB = await DurianData.find(); // Fetch all data from MongoDB
 
@@ -196,9 +207,28 @@ router.get('/start-job', (req, res) => {
 		console.log('Error transferring data to the smart contract');
 	}
 	});
+	jobStatus = 'running'; // Update job status
 	res.status(200).send('Cron job started');
+}
   });
 
+// Route to get the current job status and next job time
+router.get('/job-status', (req, res) => {
+    res.status(200).json({ jobStatus, nextJobTime });
+});
+
+// Route to get the next job time
+router.get('/next-job-time', (req, res) => {
+    if (cronJob) {
+        const nextJobTimeValue = cronJob.nextInvocation();
+        nextJobTime = nextJobTimeValue.toLocaleString(); // Update nextJobTime
+        res.status(200).json({ nextJobTime });
+    } else {
+        nextJobTime = 'Not scheduled'; // Update nextJobTime
+        res.status(404).json({ message: 'No job scheduled' });
+    }
+});
+  
 router.get('/logout', (req, res) => {
 	res.clearCookie('token');
 	res.redirect('/admin'); // Redirect to the login page after logout

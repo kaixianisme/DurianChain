@@ -14,7 +14,7 @@ require('winston-mongodb')
 
 const logger = require('./logger')
 
-// app.use(helmet()); // secure application
+app.use(helmet()); // secure application
 
 // Express middleware to serve static files from the 'public' folder
 app.use(express.static('views/DurianTypes'));

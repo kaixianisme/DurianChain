@@ -1,5 +1,3 @@
-// TODO: Fix this logger
-
 const logger = require('./logger');
 
 // Error handling middleware

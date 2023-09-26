@@ -62,7 +62,6 @@ router.get('/get-all-data', (req, res) => {
 });
 
 
-// #TODO authorized user access such as localhost
 // Endpoint to transfer data from MongoDB to Ethereum smart contract
 router.get('/transfer-data', async (req, res) => {
 	try {
@@ -346,7 +345,7 @@ router.get('/get-reviews', async (req, res) => {
 
 
 
-// In your Express.js server (router.js or a separate route file)
+
 router.get('/durianTree', (req, res) => {
 	// Retrieve the farmID and treeID from the request query parameters
 	const farmID = req.query.farmID;
@@ -356,7 +355,7 @@ router.get('/durianTree', (req, res) => {
 	res.render('durianTree', { farmID, treeID });
 });
 
-// In your Express.js server (router.js or a separate route file)
+
 router.get('/reviews', (req, res) => {
 	// Retrieve the farmID and treeID from the request query parameters
 	const farmID = req.query.farmID;
@@ -365,76 +364,6 @@ router.get('/reviews', (req, res) => {
 	// Render the durianTree.ejs page and pass farmID and treeID as variables
 	res.render('reviews', { farmID, treeID });
 });
-
-
-// // store every durian data into smart contract every 3 hours
-// const job = schedule.scheduleJob('* * */3 * * *', async () => {
-// 	logger.info('Starting cronjob...')
-// 	try {
-// 		const dataFromMongoDB = await DurianData.find(); // Fetch all data from MongoDB
-
-// 		// Loop through the data and send it to the smart contract
-// 		for (const data of dataFromMongoDB) {
-// 			const {
-// 				country,
-// 				postCode,
-// 				farmID,
-// 				treeID,
-// 				durianType,
-// 				durianID,
-// 				harvestTime,
-// 				scanTime,
-// 				firstPlant,
-// 				workerID,
-// 			} = data;
-
-// 			// Create a transaction object
-// 			const transactionObject = {
-// 				from: account.address,
-// 				to: contractAddress,
-// 				gas: 1000000, // Adjust gas limit as needed
-// 				gasPrice,     // Set a high gas price
-// 				data: contract.methods
-// 					.addDurian(
-// 						country,
-// 						postCode,
-// 						farmID,
-// 						treeID,
-// 						durianType,
-// 						durianID,
-// 						harvestTime,
-// 						scanTime,
-// 						firstPlant,
-// 						workerID
-// 					)
-// 					.encodeABI(),
-// 			};
-
-// 			// Sign the transaction
-// 			const signedTransaction = await web3.eth.accounts.signTransaction(
-// 				transactionObject,
-// 				privateKey
-// 			);
-
-// 			// Send the signed transaction
-// 			await web3.eth.sendSignedTransaction(signedTransaction.rawTransaction);
-// 		}
-
-// 		// After successful transfer, delete data from MongoDB
-// 		DurianData.deleteMany({})
-// 			.then(() => {
-// 				logger.info('All data removed from MongoDB'); // Log success
-// 				logger.info('Data transferred to the smart contract and removed from MongoDB');
-// 			})
-// 			.catch(err => {
-// 				logger.error('Error removing data from MongoDB:', err); // Log error
-// 				logger.info('Error removing data from MongoDB');
-// 			});
-// 	} catch (error) {
-// 		logger.error('Error transferring data to the smart contract:', error); // Log error
-// 		logger.info('Error transferring data to the smart contract');
-// 	}
-// });
 
 // Define a function to cancel the cron job
 function cancelJob() {

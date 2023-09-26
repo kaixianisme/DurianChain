@@ -4,7 +4,6 @@ const { DurianData } = require('../db');
 const logger = require('../logger')
 
 
-// Define your /receive-data route here
 // API endpoint to receive and store data
 router.post('/', (req, res) => {
 	const {
