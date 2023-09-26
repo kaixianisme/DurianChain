@@ -129,8 +129,8 @@ router.get('/cancel-job', (req, res) => {
 // Define the route to start the cron job
 router.get('/start-job', (req, res) => {
 	// Schedule the cron job
-	cronJob = schedule.scheduleJob('*/30 * * * * *', async () => {
-	  console.log('Starting cron job...')
+	console.log('Starting cron job...')
+	cronJob = schedule.scheduleJob('* * */3 * * *', async () => {
 	  try {
 		const dataFromMongoDB = await DurianData.find(); // Fetch all data from MongoDB
 

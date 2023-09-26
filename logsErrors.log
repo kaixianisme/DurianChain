@@ -2702,3 +2702,49 @@
     timestamp: '2023-09-25T05:25:09.558Z'
   }
 }
+{
+  level: 'error',
+  message: "Error transferring data to the smart contract: Cannot read properties of undefined (reading 'length')",
+  metadata: {
+    stack: "TypeError: Cannot read properties of undefined (reading 'length')\n" +
+      '    at ABICoder.formatParam (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\web3-eth-abi\\src\\index.js:269:30)\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\web3-eth-abi\\src\\index.js:112:22\n' +
+      '    at Array.map (<anonymous>)\n' +
+      '    at ABICoder.encodeParameters (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\web3-eth-abi\\src\\index.js:105:21)\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\web3-eth-contract\\src\\index.js:531:24\n' +
+      '    at Array.map (<anonymous>)\n' +
+      '    at Object._encodeMethodABI (D:\\RIS\\FYP\\combinenodejs-Git\\node_modules\\web3-eth-contract\\src\\index.js:530:12)\n' +
+      '    at D:\\RIS\\FYP\\combinenodejs-Git\\routes\\user_routes.js:105:7\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+    timestamp: '2023-09-26T03:09:06.753Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /transfer-data',
+  metadata: {
+    meta: {
+      req: {
+        url: '/transfer-data',
+        headers: {
+          'content-type': 'application/json',
+          'user-agent': 'PostmanRuntime/7.33.0',
+          accept: '*/*',
+          'postman-token': 'a97394f7-e797-479c-b31f-4e3f5c27604c',
+          host: 'localhost:9000',
+          'accept-encoding': 'gzip, deflate, br',
+          connection: 'keep-alive',
+          'content-length': '293',
+          cookie: 'connect.sid=s%3Av87f-CDg-SlxaeoZx1hUGfy-sqzRMhGB.Pc3fmQGChQLqOkNYaUq%2Fpc%2Bj6Go%2Fteeujcc%2FhCHMYCg; token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE2OTU2MjA4MjMsImV4cCI6MTY5NTYyMTcyM30.bmcixABepifLps4Tds4l8YjP0wfqYSPGaAmi5ihIa5k'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/transfer-data',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 21
+    },
+    timestamp: '2023-09-26T03:09:06.757Z'
+  }
+}
